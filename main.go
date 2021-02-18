@@ -9,12 +9,24 @@ import (
 )
 
 func main() {
-	data, err := ioutil.ReadFile("./data/20210218101232_0_VXSE53_270000.xml")
+	dir := "./data"
+
+	files, err := ioutil.ReadDir(dir)
 	if err != nil {
 		panic(err)
 	}
 
-	v := &vxse.Report{}
-	xml.Unmarshal(data, &v)
-	fmt.Printf("%#v", v)
+	for _, file := range files {
+		data, err := ioutil.ReadFile(dir + "/" + file.Name())
+		if err != nil {
+			panic(err)
+		}
+
+		v := &vxse.Report{}
+		xml.Unmarshal(data, &v)
+
+		fmt.Println(file.Name())
+		fmt.Printf("%#v\n", v)
+	}
+
 }
