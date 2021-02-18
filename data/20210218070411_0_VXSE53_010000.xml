@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-18T07:04:11Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-18T16:04:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-18T16:04:00+09:00</TargetDateTime>
+<EventID>20210218160119</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１８日１６時０１分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-18T16:01:00+09:00</OriginTime>
+<ArrivalTime>2021-02-18T16:01:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>浦河沖</Name>
+<Code type="震央地名">192</Code>
+<jmx_eb:Coordinate description="北緯４２．０度　東経１４２．５度　深さ　７０ｋｍ" datum="日本測地系">+42.0+142.5-70000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ４．１">4.1</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>1</MaxInt>
+<Pref><Name>北海道</Name><Code>01</Code><MaxInt>1</MaxInt>
+<Area><Name>渡島地方東部</Name><Code>106</Code><MaxInt>1</MaxInt>
+<City><Name>函館市</Name><Code>0120200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>函館市新浜町＊</Name><Code>0120222</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>胆振地方中東部</Name><Code>146</Code><MaxInt>1</MaxInt>
+<City><Name>安平町</Name><Code>0158500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>安平町追分柏が丘＊</Name><Code>0158521</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>日高地方中部</Name><Code>151</Code><MaxInt>1</MaxInt>
+<City><Name>新ひだか町</Name><Code>0161000</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>新ひだか町静内山手町</Name><Code>0161001</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>新ひだか町静内御幸町＊</Name><Code>0161020</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>新ひだか町三石旭町＊</Name><Code>0161021</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>日高地方東部</Name><Code>152</Code><MaxInt>1</MaxInt>
+<City><Name>浦河町</Name><Code>0160700</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>浦河町潮見</Name><Code>0160702</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>浦河町築地＊</Name><Code>0160720</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

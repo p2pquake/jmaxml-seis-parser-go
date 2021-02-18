@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-18T07:53:57Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-18T16:53:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-18T16:53:00+09:00</TargetDateTime>
+<EventID>20210218165103</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１８日１６時５１分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-18T16:50:00+09:00</OriginTime>
+<ArrivalTime>2021-02-18T16:51:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>青森県東方沖</Name>
+<Code type="震央地名">285</Code>
+<jmx_eb:Coordinate description="北緯４０．９度　東経１４２．２度　深さ　５０ｋｍ" datum="日本測地系">+40.9+142.2-50000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．７">3.7</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>2</MaxInt>
+<Pref><Name>青森県</Name><Code>02</Code><MaxInt>2</MaxInt>
+<Area><Name>青森県三八上北</Name><Code>202</Code><MaxInt>2</MaxInt>
+<City><Name>階上町</Name><Code>0244600</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>階上町道仏＊</Name><Code>0244631</Code><Int>2</Int></IntensityStation>
+</City>
+<City><Name>八戸市</Name><Code>0220300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>八戸市湊町</Name><Code>0220302</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>八戸市内丸＊</Name><Code>0220320</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>八戸市南郷＊</Name><Code>0220331</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>岩手県</Name><Code>03</Code><MaxInt>1</MaxInt>
+<Area><Name>岩手県沿岸北部</Name><Code>210</Code><MaxInt>1</MaxInt>
+<City><Name>久慈市</Name><Code>0320700</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>久慈市枝成沢</Name><Code>0320701</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

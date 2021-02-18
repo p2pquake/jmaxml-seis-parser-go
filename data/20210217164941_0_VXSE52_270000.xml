@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源に関する情報</Title>
+<DateTime>2021-02-17T16:49:41Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>大阪管区気象台</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源に関する情報</Title>
+<ReportDateTime>2021-02-18T01:49:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-18T01:49:00+09:00</TargetDateTime>
+<EventID>20210218014649</EventID>
+<InfoType>発表</InfoType>
+<Serial></Serial>
+<InfoKind>震源速報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>きょう１８日０１時４６分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-18T01:46:00+09:00</OriginTime>
+<ArrivalTime>2021-02-18T01:46:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>沖縄本島近海</Name>
+<Code type="震央地名">850</Code>
+<jmx_eb:Coordinate description="北緯２７．４度　東経１２８．６度　深さ　４０ｋｍ" datum="日本測地系">+27.4+128.6-40000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ４．０">4.0</jmx_eb:Magnitude>
+</Earthquake>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+</Comments>
+</Body>
+</Report>

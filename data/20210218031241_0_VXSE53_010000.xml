@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-18T03:12:41Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-18T12:12:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-18T12:12:00+09:00</TargetDateTime>
+<EventID>20210218120940</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１８日１２時０９分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-18T12:09:00+09:00</OriginTime>
+<ArrivalTime>2021-02-18T12:09:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>茨城県沖</Name>
+<Code type="震央地名">471</Code>
+<jmx_eb:Coordinate description="北緯３６．１度　東経１４０．９度　深さ　４０ｋｍ" datum="日本測地系">+36.1+140.9-40000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．２">3.2</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>1</MaxInt>
+<Pref><Name>茨城県</Name><Code>08</Code><MaxInt>1</MaxInt>
+<Area><Name>茨城県南部</Name><Code>301</Code><MaxInt>1</MaxInt>
+<City><Name>茨城鹿嶋市</Name><Code>0822200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>茨城鹿嶋市宮中＊</Name><Code>0822220</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

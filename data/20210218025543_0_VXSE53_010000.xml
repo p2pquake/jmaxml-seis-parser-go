@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-18T02:55:43Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-18T11:55:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-18T11:55:00+09:00</TargetDateTime>
+<EventID>20210218115230</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１８日１１時５２分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-18T11:52:00+09:00</OriginTime>
+<ArrivalTime>2021-02-18T11:52:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>福島県沖</Name>
+<Code type="震央地名">289</Code>
+<jmx_eb:Coordinate description="北緯３７．７度　東経１４１．７度　深さ　５０ｋｍ" datum="日本測地系">+37.7+141.7-50000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ４．０">4.0</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>2</MaxInt>
+<Pref><Name>宮城県</Name><Code>04</Code><MaxInt>2</MaxInt>
+<Area><Name>宮城県南部</Name><Code>221</Code><MaxInt>2</MaxInt>
+<City><Name>山元町</Name><Code>0436200</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>山元町浅生原＊</Name><Code>0436231</Code><Int>2</Int></IntensityStation>
+</City>
+<City><Name>角田市</Name><Code>0420800</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>角田市角田＊</Name><Code>0420820</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>岩沼市</Name><Code>0421100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>岩沼市桜＊</Name><Code>0421120</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>宮城川崎町</Name><Code>0432400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>宮城川崎町前川＊</Name><Code>0432430</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>亘理町</Name><Code>0436100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>亘理町悠里＊</Name><Code>0436131</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>宮城県中部</Name><Code>222</Code><MaxInt>1</MaxInt>
+<City><Name>石巻市</Name><Code>0420200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>石巻市桃生町＊</Name><Code>0420239</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>福島県</Name><Code>07</Code><MaxInt>1</MaxInt>
+<Area><Name>福島県中通り</Name><Code>250</Code><MaxInt>1</MaxInt>
+<City><Name>福島市</Name><Code>0720100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>福島市桜木町＊</Name><Code>0720120</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>二本松市</Name><Code>0721000</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>二本松市油井＊</Name><Code>0721031</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>二本松市針道＊</Name><Code>0721034</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>田村市</Name><Code>0721100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>田村市船引町</Name><Code>0721101</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>田村市常葉町＊</Name><Code>0721133</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>福島伊達市</Name><Code>0721300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>福島伊達市梁川町＊</Name><Code>0721331</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>福島伊達市霊山町＊</Name><Code>0721333</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>川俣町</Name><Code>0730800</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>川俣町五百田＊</Name><Code>0730832</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>福島県浜通り</Name><Code>251</Code><MaxInt>1</MaxInt>
+<City><Name>相馬市</Name><Code>0720900</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>相馬市中村＊</Name><Code>0720932</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>南相馬市</Name><Code>0721200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>南相馬市鹿島区栃窪</Name><Code>0721201</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>南相馬市原町区高見町＊</Name><Code>0721220</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>南相馬市鹿島区西町＊</Name><Code>0721233</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>川内村</Name><Code>0754400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>川内村下川内</Name><Code>0754400</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>大熊町</Name><Code>0754500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>大熊町大川原＊</Name><Code>0754531</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>浪江町</Name><Code>0754700</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>浪江町幾世橋</Name><Code>0754700</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>新地町</Name><Code>0756100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>新地町谷地小屋＊</Name><Code>0756132</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>飯舘村</Name><Code>0756400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>飯舘村伊丹沢＊</Name><Code>0756431</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-16T14:02:26Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-16T23:02:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-16T23:02:00+09:00</TargetDateTime>
+<EventID>20210216225935</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１６日２２時５９分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-16T22:59:00+09:00</OriginTime>
+<ArrivalTime>2021-02-16T22:59:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>福島県沖</Name>
+<Code type="震央地名">289</Code>
+<jmx_eb:Coordinate description="北緯３７．５度　東経１４１．６度　深さ　５０ｋｍ" datum="日本測地系">+37.5+141.6-50000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ４．１">4.1</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>1</MaxInt>
+<Pref><Name>宮城県</Name><Code>04</Code><MaxInt>1</MaxInt>
+<Area><Name>宮城県南部</Name><Code>221</Code><MaxInt>1</MaxInt>
+<City><Name>角田市</Name><Code>0420800</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>角田市角田＊</Name><Code>0420820</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>山元町</Name><Code>0436200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>山元町浅生原＊</Name><Code>0436231</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>宮城県中部</Name><Code>222</Code><MaxInt>1</MaxInt>
+<City><Name>石巻市</Name><Code>0420200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>石巻市桃生町＊</Name><Code>0420239</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>福島県</Name><Code>07</Code><MaxInt>1</MaxInt>
+<Area><Name>福島県中通り</Name><Code>250</Code><MaxInt>1</MaxInt>
+<City><Name>田村市</Name><Code>0721100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>田村市船引町</Name><Code>0721101</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>田村市都路町＊</Name><Code>0721134</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>福島県浜通り</Name><Code>251</Code><MaxInt>1</MaxInt>
+<City><Name>いわき市</Name><Code>0720400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>いわき市三和町</Name><Code>0720401</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>南相馬市</Name><Code>0721200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>南相馬市原町区高見町＊</Name><Code>0721220</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>福島広野町</Name><Code>0754100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>福島広野町下北迫大谷地原＊</Name><Code>0754120</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>楢葉町</Name><Code>0754200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>楢葉町北田＊</Name><Code>0754230</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>富岡町</Name><Code>0754300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>富岡町本岡＊</Name><Code>0754330</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>大熊町</Name><Code>0754500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>大熊町大川原＊</Name><Code>0754531</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>浪江町</Name><Code>0754700</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>浪江町幾世橋</Name><Code>0754700</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>
