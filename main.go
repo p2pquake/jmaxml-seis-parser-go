@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
+	"github.com/p2pquake/jmaxml-vxse-parser-go/converter"
 	"github.com/p2pquake/jmaxml-vxse-parser-go/vxse"
 )
 
@@ -22,11 +23,26 @@ func main() {
 			panic(err)
 		}
 
-		v := &vxse.Report{}
-		xml.Unmarshal(data, &v)
-
 		fmt.Println(file.Name())
-		fmt.Printf("%#v\n", v)
+
+		v := &vxse.Report{}
+		err = xml.Unmarshal(data, &v)
+		if err != nil {
+			fmt.Printf("%#v\n", err)
+			continue
+		} else {
+			fmt.Printf("%#v\n", v)
+		}
+
+		e, err := converter.Vxse2Epsp(*v)
+		if err != nil {
+			fmt.Printf("%#v\n", err)
+			continue
+		} else {
+			fmt.Printf("%#v\n", e)
+		}
+
+		fmt.Println()
 	}
 
 }
