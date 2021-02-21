@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 12:12:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 12:09:00",
+    "hypocenter": {
+      "name": "茨城県沖",
+      "latitude": 36.1,
+      "longitude": 140.9,
+      "depth": 40,
+      "magnitude": 3.2
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "茨城県",
+      "addr": "茨城鹿嶋市宮中",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

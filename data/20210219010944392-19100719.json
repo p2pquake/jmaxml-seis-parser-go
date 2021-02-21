@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/19 10:09:00",
+    "type": "Destination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/19 10:07:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.7,
+      "longitude": 141.6,
+      "depth": 50,
+      "magnitude": 4.7
+    },
+    "maxScale": -1,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

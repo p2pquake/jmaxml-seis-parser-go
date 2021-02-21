@@ -1,0 +1,138 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 22:27:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 22:23:00",
+    "hypocenter": {
+      "name": "北海道東方沖",
+      "latitude": 43.3,
+      "longitude": 146.9,
+      "depth": 50,
+      "magnitude": 5.0
+    },
+    "maxScale": 30,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "北海道",
+      "addr": "根室市落石東",
+      "scale": 30,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "根室市珸瑶瑁",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "根室市弥栄",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "根室市豊里",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "根室市牧の内",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "根室市厚床",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "斜里町本町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "浜中町湯沸",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "浜中町茶内",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "弟子屈町弟子屈",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "鶴居村鶴居東",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "白糠町西１条",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "別海町常盤",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "別海町本別海",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "中標津町養老牛",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "中標津町丸山",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "標津町北２条",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "羅臼町緑町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "羅臼町岬町",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 02:31:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 02:29:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.6,
+      "longitude": 141.6,
+      "depth": 50,
+      "magnitude": 3.6
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "福島県",
+      "addr": "相馬市中村",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

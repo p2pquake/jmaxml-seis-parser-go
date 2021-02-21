@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 01:49:00",
+    "type": "Destination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 01:46:00",
+    "hypocenter": {
+      "name": "沖縄本島近海",
+      "latitude": 27.4,
+      "longitude": 128.6,
+      "depth": 40,
+      "magnitude": 4.0
+    },
+    "maxScale": -1,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

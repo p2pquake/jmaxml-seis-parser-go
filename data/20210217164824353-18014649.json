@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 01:48:00",
+    "type": "ScalePrompt",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 01:46:00",
+    "hypocenter": {
+      "name": "",
+      "latitude": -200.0,
+      "longitude": -200.0,
+      "depth": -1,
+      "magnitude": -1.0
+    },
+    "maxScale": 30,
+    "domesticTsunami": "Checking",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "鹿児島県",
+      "addr": "鹿児島県奄美南部",
+      "scale": 30,
+      "isArea": true
+    }
+  ]
+}

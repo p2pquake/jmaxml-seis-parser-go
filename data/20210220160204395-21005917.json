@@ -1,0 +1,36 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/21 01:02:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/21 00:59:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.6,
+      "longitude": 141.5,
+      "depth": 50,
+      "magnitude": 3.5
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "福島県",
+      "addr": "川内村下川内",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "大熊町大川原",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

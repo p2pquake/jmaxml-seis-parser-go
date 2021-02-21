@@ -1,0 +1,144 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/19 18:14:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/19 18:11:00",
+    "hypocenter": {
+      "name": "岩手県内陸北部",
+      "latitude": 40.2,
+      "longitude": 141.2,
+      "depth": 10,
+      "magnitude": 3.9
+    },
+    "maxScale": 40,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "岩手県",
+      "addr": "二戸市浄法寺町",
+      "scale": 40,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "八幡平市叺田",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "一戸町高善寺",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "盛岡市薮川",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "盛岡市渋民",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "二戸市福岡",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "二戸市石切所",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "八幡平市大更",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "八幡平市田頭",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "八幡平市野駄",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "葛巻町葛巻元木",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "葛巻町役場",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "岩手町五日市",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "三戸町在府小路町",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "八戸市南郷",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "五戸町古舘",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "田子町田子",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "青森南部町苫米地",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "階上町道仏",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "秋田県",
+      "addr": "小坂町小坂砂森",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

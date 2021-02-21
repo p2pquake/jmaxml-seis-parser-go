@@ -1,0 +1,306 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 10:21:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 10:17:00",
+    "hypocenter": {
+      "name": "宮城県沖",
+      "latitude": 38.3,
+      "longitude": 141.6,
+      "depth": 60,
+      "magnitude": 4.1
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "宮城県",
+      "addr": "気仙沼市唐桑町",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "仙台宮城野区苦竹",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市泉町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市大瓜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市鮎川浜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市大街道南",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市北上町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市前谷地",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市桃生町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "気仙沼市赤岩",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "気仙沼市笹が陣",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "仙台空港",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "名取市増田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "岩沼市桜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市中田町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市東和町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市豊里町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市南方町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市石越町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市津山町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "栗原市栗駒",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "栗原市金成",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "東松島市小野",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "東松島市矢本",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "大崎市田尻",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "柴田町船岡",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "宮城川崎町前川",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "亘理町悠里",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "松島町高城",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "七ヶ浜町東宮浜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "大衡村大衡",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "涌谷町新町裏",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "女川町女川浜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "南三陸町志津川",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "南三陸町歌津",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "大船渡市大船渡町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "大船渡市猪川町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "大船渡市盛町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "一関市花泉町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "一関市東山町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "一関市室根町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "一関市藤沢町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "陸前高田市高田町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "釜石市中妻町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "住田町世田米",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "相馬市中村",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "飯舘村伊丹沢",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

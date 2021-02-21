@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 22:26:00",
+    "type": "Destination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 22:23:00",
+    "hypocenter": {
+      "name": "北海道東方沖",
+      "latitude": 43.3,
+      "longitude": 146.9,
+      "depth": 50,
+      "magnitude": 5.0
+    },
+    "maxScale": -1,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

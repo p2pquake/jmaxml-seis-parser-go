@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 01:20:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 01:16:00",
+    "hypocenter": {
+      "name": "青森県東方沖",
+      "latitude": 40.7,
+      "longitude": 142.8,
+      "depth": 10,
+      "magnitude": 4.9
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

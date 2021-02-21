@@ -1,0 +1,36 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/17 23:08:00",
+    "type": "ScalePrompt",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/17 23:06:00",
+    "hypocenter": {
+      "name": "",
+      "latitude": -200.0,
+      "longitude": -200.0,
+      "depth": -1,
+      "magnitude": -1.0
+    },
+    "maxScale": 30,
+    "domesticTsunami": "Checking",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "宮城県",
+      "addr": "宮城県中部",
+      "scale": 30,
+      "isArea": true
+    },
+    {
+      "pref": "福島県",
+      "addr": "福島県浜通り",
+      "scale": 30,
+      "isArea": true
+    }
+  ]
+}

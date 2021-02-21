@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/17 08:33:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/17 08:31:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.6,
+      "longitude": 141.6,
+      "depth": 50,
+      "magnitude": 3.7
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "福島県",
+      "addr": "田村市船引町",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

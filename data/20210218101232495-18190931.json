@@ -1,0 +1,48 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 19:12:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 19:09:00",
+    "hypocenter": {
+      "name": "宮古島近海",
+      "latitude": 24.3,
+      "longitude": 125.2,
+      "depth": 30,
+      "magnitude": 4.2
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "沖縄県",
+      "addr": "宮古島市城辺福北",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "沖縄県",
+      "addr": "宮古島市伊良部前里添",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "沖縄県",
+      "addr": "宮古島市城辺福西",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "沖縄県",
+      "addr": "宮古島市上野支所",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

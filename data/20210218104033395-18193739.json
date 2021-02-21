@@ -1,0 +1,174 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 19:40:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 19:37:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.6,
+      "longitude": 141.6,
+      "depth": 50,
+      "magnitude": 4.1
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "福島県",
+      "addr": "相馬市中村",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "いわき市三和町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "須賀川市八幡山",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "二本松市油井",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "田村市船引町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "田村市都路町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "南相馬市原町区三島町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "南相馬市鹿島区栃窪",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "南相馬市原町区高見町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "南相馬市鹿島区西町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "福島伊達市梁川町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "川俣町五百田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "天栄村下松本",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "福島広野町下北迫大谷地原",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "楢葉町北田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "川内村下川内",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "大熊町大川原",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "双葉町両竹",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "浪江町幾世橋",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "新地町谷地小屋",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "石巻市桃生町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "岩沼市桜",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "登米市中田町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "亘理町悠里",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "山元町浅生原",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

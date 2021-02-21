@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 10:21:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 10:17:00",
+    "hypocenter": {
+      "name": "宮城県沖",
+      "latitude": 38.3,
+      "longitude": 141.6,
+      "depth": 60,
+      "magnitude": 4.1
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

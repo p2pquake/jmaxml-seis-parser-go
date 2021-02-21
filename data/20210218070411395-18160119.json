@@ -1,0 +1,66 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 16:04:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 16:01:00",
+    "hypocenter": {
+      "name": "浦河沖",
+      "latitude": 42.0,
+      "longitude": 142.5,
+      "depth": 70,
+      "magnitude": 4.1
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "北海道",
+      "addr": "函館市新浜町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "安平町追分柏が丘",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "浦河町潮見",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "浦河町築地",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "新ひだか町静内山手町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "新ひだか町静内御幸町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "北海道",
+      "addr": "新ひだか町三石旭町",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 04:01:00",
+    "type": "Destination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 03:58:00",
+    "hypocenter": {
+      "name": "愛知県西部",
+      "latitude": 35.1,
+      "longitude": 137.3,
+      "depth": 40,
+      "magnitude": 4.2
+    },
+    "maxScale": -1,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

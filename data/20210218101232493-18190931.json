@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 19:12:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 19:09:00",
+    "hypocenter": {
+      "name": "宮古島近海",
+      "latitude": 24.3,
+      "longitude": 125.2,
+      "depth": 30,
+      "magnitude": 4.2
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

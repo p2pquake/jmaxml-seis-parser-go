@@ -1,0 +1,54 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 16:53:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 16:51:00",
+    "hypocenter": {
+      "name": "青森県東方沖",
+      "latitude": 40.9,
+      "longitude": 142.2,
+      "depth": 50,
+      "magnitude": 3.7
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "青森県",
+      "addr": "階上町道仏",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "八戸市湊町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "八戸市内丸",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "青森県",
+      "addr": "八戸市南郷",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "岩手県",
+      "addr": "久慈市枝成沢",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

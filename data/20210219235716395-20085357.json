@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "TR.tr(\"",
+    "time": "0001/01/01 00:00:00",
+    "type": "ScalePrompt",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "0001/01/01 00:00:00",
+    "hypocenter": {
+      "name": "",
+      "latitude": -200.0,
+      "longitude": -200.0,
+      "depth": -1,
+      "magnitude": -1.0
+    },
+    "maxScale": 70,
+    "domesticTsunami": "Unknown",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

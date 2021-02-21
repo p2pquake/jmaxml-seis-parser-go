@@ -2,38 +2,39 @@ package epsp
 
 // 地震情報
 type JMAQuake struct {
-	Code       int // "551"
-	Issue      Issue
-	Earthquake Earthquake
-	Points     []Point
+	// Code       int        `json:"code"` // "551"
+	Expire     *string    `json:"expire"`
+	Issue      Issue      `json:"issue"`
+	Earthquake Earthquake `json:"earthquake"`
+	Points     []Point    `json:"points"`
 }
 
 type Issue struct {
-	Source  string
-	Time    string
-	Type    string // "ScalePrompt" / "Destination" / "ScaleAndDestination" / "DetailScale" / "Foreign" / "Other"
-	Correct string // "None" / "Unknown" / "ScaleOnly" / "DestinationOnly" / "ScaleAndDestination"
+	Source  string `json:"source"`
+	Time    string `json:"time"`
+	Type    string `json:"type"`    // "ScalePrompt" / "Destination" / "ScaleAndDestination" / "DetailScale" / "Foreign" / "Other"
+	Correct string `json:"correct"` // "None" / "Unknown" / "ScaleOnly" / "DestinationOnly" / "ScaleAndDestination"
 }
 
 type Earthquake struct {
-	Time            string
-	Hypocenter      Hypocenter
-	MaxScale        int
-	DomesticTsunami string
-	ForeignTsunami  string
+	Time            string     `json:"time"`
+	Hypocenter      Hypocenter `json:"hypocenter"`
+	MaxScale        int        `json:"maxScale"`
+	DomesticTsunami string     `json:"domesticTsunami"`
+	ForeignTsunami  string     `json:"foreignTsunami"`
 }
 
 type Hypocenter struct {
-	Name      string
-	Latitude  float64
-	Longitude float64
-	Depth     int
-	Magnitude float64
+	Name      string  `json:"name"`
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
+	Depth     int     `json:"depth"`
+	Magnitude float64 `json:"magnitude"`
 }
 
 type Point struct {
-	Pref   string
-	Addr   string
-	IsArea bool
-	Scale  int
+	Pref   string `json:"pref"`
+	Addr   string `json:"addr"`
+	Scale  int    `json:"scale"`
+	IsArea bool   `json:"isArea"`
 }

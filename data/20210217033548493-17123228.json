@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/17 12:35:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/17 12:32:00",
+    "hypocenter": {
+      "name": "日向灘",
+      "latitude": 32.1,
+      "longitude": 132.1,
+      "depth": 20,
+      "magnitude": 3.5
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

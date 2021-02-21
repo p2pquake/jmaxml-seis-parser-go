@@ -1,0 +1,96 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/16 23:02:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/16 22:59:00",
+    "hypocenter": {
+      "name": "福島県沖",
+      "latitude": 37.5,
+      "longitude": 141.6,
+      "depth": 50,
+      "magnitude": 4.1
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "宮城県",
+      "addr": "石巻市桃生町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "角田市角田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "宮城県",
+      "addr": "山元町浅生原",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "いわき市三和町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "田村市船引町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "田村市都路町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "南相馬市原町区高見町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "福島広野町下北迫大谷地原",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "楢葉町北田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "富岡町本岡",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "大熊町大川原",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "福島県",
+      "addr": "浪江町幾世橋",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

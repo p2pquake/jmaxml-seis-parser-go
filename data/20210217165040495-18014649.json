@@ -1,0 +1,84 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 01:50:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 01:46:00",
+    "hypocenter": {
+      "name": "沖縄本島近海",
+      "latitude": 27.4,
+      "longitude": 128.6,
+      "depth": 40,
+      "magnitude": 4.0
+    },
+    "maxScale": 30,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "鹿児島県",
+      "addr": "知名町瀬利覚",
+      "scale": 30,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "伊仙町伊仙",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "瀬戸内町請島",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "瀬戸内町加計呂麻島",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "瀬戸内町与路島",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "天城町平土野",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "和泊町国頭",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "和泊町和泊",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "知名町知名",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "鹿児島県",
+      "addr": "与論町茶花",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

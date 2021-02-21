@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 06:06:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 06:03:00",
+    "hypocenter": {
+      "name": "奄美大島近海",
+      "latitude": 28.3,
+      "longitude": 129.6,
+      "depth": 30,
+      "magnitude": 3.3
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

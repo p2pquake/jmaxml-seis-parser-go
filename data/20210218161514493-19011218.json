@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/19 01:15:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/19 01:12:00",
+    "hypocenter": {
+      "name": "島根県西部",
+      "latitude": 35.1,
+      "longitude": 132.4,
+      "depth": 10,
+      "magnitude": 2.9
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

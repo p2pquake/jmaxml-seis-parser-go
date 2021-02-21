@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/21 00:09:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/21 00:06:00",
+    "hypocenter": {
+      "name": "広島県北部",
+      "latitude": 34.9,
+      "longitude": 132.8,
+      "depth": 10,
+      "magnitude": 3.4
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": []
+}

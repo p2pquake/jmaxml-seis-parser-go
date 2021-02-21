@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/19 19:16:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/19 19:12:00",
+    "hypocenter": {
+      "name": "和歌山県北部",
+      "latitude": 34.0,
+      "longitude": 135.2,
+      "depth": 10,
+      "magnitude": 2.4
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "和歌山県",
+      "addr": "湯浅町青木",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

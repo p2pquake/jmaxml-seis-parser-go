@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/20 23:43:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/20 23:38:00",
+    "hypocenter": {
+      "name": "紀伊水道",
+      "latitude": 34.0,
+      "longitude": 135.1,
+      "depth": 10,
+      "magnitude": 2.3
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "和歌山県",
+      "addr": "湯浅町青木",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

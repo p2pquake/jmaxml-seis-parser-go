@@ -27,7 +27,7 @@ func Vxse2Epsp(vxse vxse.Report) (*epsp.JMAQuake, error) {
 	}
 
 	jmaQuake := epsp.JMAQuake{
-		Code: 551,
+		Expire: nil,
 		Issue: epsp.Issue{
 			Source:  strings.Join(vxse.Control.PublishingOffice, "、"),
 			Time:    EPSPTime(vxse.Control.DateTime),

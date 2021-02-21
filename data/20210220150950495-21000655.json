@@ -1,0 +1,150 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/21 00:09:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/21 00:06:00",
+    "hypocenter": {
+      "name": "広島県北部",
+      "latitude": 34.9,
+      "longitude": 132.8,
+      "depth": 10,
+      "magnitude": 3.4
+    },
+    "maxScale": 20,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "島根県",
+      "addr": "邑南町下口羽",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "島根県",
+      "addr": "飯南町下赤名",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "島根県",
+      "addr": "川本町川本",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "島根県",
+      "addr": "島根美郷町都賀本郷",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "島根県",
+      "addr": "邑南町瑞穂支所",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "庄原市高野町",
+      "scale": 20,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島安佐北区可部南",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島三次市十日市中",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島三次市三次町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島三次市布野町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島三次市作木町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "広島三次市君田町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "庄原市西城町大佐",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "庄原市中本町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "安芸高田市向原町長田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "安芸高田市高宮町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "安芸高田市美土里町",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "北広島町都志見",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "北広島町有田",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "北広島町豊平郵便局",
+      "scale": 10,
+      "isArea": false
+    },
+    {
+      "pref": "広島県",
+      "addr": "神石高原町油木",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

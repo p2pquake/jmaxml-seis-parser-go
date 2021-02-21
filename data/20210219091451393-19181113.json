@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/19 18:14:00",
+    "type": "ScaleAndDestination",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/19 18:11:00",
+    "hypocenter": {
+      "name": "岩手県内陸北部",
+      "latitude": 40.2,
+      "longitude": 141.2,
+      "depth": 10,
+      "magnitude": 3.9
+    },
+    "maxScale": 40,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "岩手県",
+      "addr": "岩手県内陸北部",
+      "scale": 40,
+      "isArea": true
+    }
+  ]
+}

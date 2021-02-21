@@ -1,0 +1,30 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2021/02/18 05:46:00",
+    "type": "DetailScale",
+    "correct": "None"
+  },
+  "earthquake": {
+    "time": "2021/02/18 05:43:00",
+    "hypocenter": {
+      "name": "山口県北部",
+      "latitude": 34.3,
+      "longitude": 131.4,
+      "depth": 20,
+      "magnitude": 2.7
+    },
+    "maxScale": 10,
+    "domesticTsunami": "None",
+    "foreignTsunami": "Unknown"
+  },
+  "points": [
+    {
+      "pref": "山口県",
+      "addr": "美祢市秋芳町秋吉",
+      "scale": 10,
+      "isArea": false
+    }
+  ]
+}

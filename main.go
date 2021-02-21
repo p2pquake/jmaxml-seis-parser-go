@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
@@ -40,6 +41,14 @@ func main() {
 			continue
 		} else {
 			fmt.Printf("%#v\n", e)
+		}
+
+		j, err := json.MarshalIndent(e, "", "  ")
+		if err != nil {
+			fmt.Printf("%#v\n", err)
+			continue
+		} else {
+			fmt.Printf("%s\n", j)
 		}
 
 		fmt.Println()
