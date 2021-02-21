@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-20T15:09:50Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>大阪管区気象台</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-21T00:09:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-21T00:09:00+09:00</TargetDateTime>
+<EventID>20210221000655</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>２１日００時０６分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-21T00:06:00+09:00</OriginTime>
+<ArrivalTime>2021-02-21T00:06:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>広島県北部</Name>
+<Code type="震央地名">590</Code>
+<jmx_eb:Coordinate description="北緯３４．９度　東経１３２．８度　深さ　１０ｋｍ" datum="日本測地系">+34.9+132.8-10000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．４">3.4</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>2</MaxInt>
+<Pref><Name>島根県</Name><Code>32</Code><MaxInt>2</MaxInt>
+<Area><Name>島根県西部</Name><Code>571</Code><MaxInt>2</MaxInt>
+<City><Name>邑南町</Name><Code>3244900</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>邑南町下口羽＊</Name><Code>3244930</Code><Int>2</Int></IntensityStation>
+<IntensityStation><Name>邑南町瑞穂支所＊</Name><Code>3244933</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>川本町</Name><Code>3244100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>川本町川本＊</Name><Code>3244131</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>島根美郷町</Name><Code>3244800</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>島根美郷町都賀本郷＊</Name><Code>3244832</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>島根県東部</Name><Code>570</Code><MaxInt>1</MaxInt>
+<City><Name>飯南町</Name><Code>3238600</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>飯南町下赤名＊</Name><Code>3238634</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>広島県</Name><Code>34</Code><MaxInt>2</MaxInt>
+<Area><Name>広島県北部</Name><Code>590</Code><MaxInt>2</MaxInt>
+<City><Name>庄原市</Name><Code>3421000</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>庄原市高野町＊</Name><Code>3421022</Code><Int>2</Int></IntensityStation>
+<IntensityStation><Name>庄原市西城町大佐＊</Name><Code>3421020</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>庄原市中本町＊</Name><Code>3421037</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>広島三次市</Name><Code>3420900</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>広島三次市十日市中</Name><Code>3420900</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>広島三次市三次町＊</Name><Code>3420920</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>広島三次市布野町＊</Name><Code>3420933</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>広島三次市作木町＊</Name><Code>3420934</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>広島三次市君田町＊</Name><Code>3420939</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>安芸高田市</Name><Code>3421400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>安芸高田市向原町長田＊</Name><Code>3421421</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>安芸高田市高宮町＊</Name><Code>3421433</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>安芸高田市美土里町＊</Name><Code>3421438</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>北広島町</Name><Code>3436900</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>北広島町都志見</Name><Code>3436901</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>北広島町有田</Name><Code>3436902</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>北広島町豊平郵便局＊</Name><Code>3436920</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>広島県南東部</Name><Code>591</Code><MaxInt>1</MaxInt>
+<City><Name>神石高原町</Name><Code>3454500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>神石高原町油木＊</Name><Code>3454520</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+<Area><Name>広島県南西部</Name><Code>592</Code><MaxInt>1</MaxInt>
+<City><Name>広島安佐北区</Name><Code>3410600</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>広島安佐北区可部南＊</Name><Code>3410630</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

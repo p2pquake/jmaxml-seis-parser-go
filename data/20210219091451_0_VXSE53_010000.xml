@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-19T09:14:51Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-19T18:14:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-19T18:14:00+09:00</TargetDateTime>
+<EventID>20210219181113</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１９日１８時１１分ころ、地震がありました。</Text>
+<Information type="震源・震度に関する情報（細分区域）">
+<Item>
+<Kind><Name>震度４</Name></Kind>
+<Areas codeType="地震情報／細分区域">
+<Area><Name>岩手県内陸北部</Name><Code>212</Code></Area>
+</Areas>
+</Item>
+</Information>
+<Information type="震源・震度に関する情報（市町村等）">
+<Item>
+<Kind><Name>震度４</Name></Kind>
+<Areas codeType="気象・地震・火山情報／市町村等">
+<Area><Name>二戸市</Name><Code>0321300</Code></Area>
+</Areas>
+</Item>
+</Information>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-19T18:11:00+09:00</OriginTime>
+<ArrivalTime>2021-02-19T18:11:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>岩手県内陸北部</Name>
+<Code type="震央地名">212</Code>
+<jmx_eb:Coordinate description="北緯４０．２度　東経１４１．２度　深さ　１０ｋｍ" datum="日本測地系">+40.2+141.2-10000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．９">3.9</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>4</MaxInt>
+<Pref><Name>岩手県</Name><Code>03</Code><MaxInt>4</MaxInt>
+<Area><Name>岩手県内陸北部</Name><Code>212</Code><MaxInt>4</MaxInt>
+<City><Name>二戸市</Name><Code>0321300</Code><MaxInt>4</MaxInt>
+<IntensityStation><Name>二戸市浄法寺町＊</Name><Code>0321330</Code><Int>4</Int></IntensityStation>
+<IntensityStation><Name>二戸市福岡</Name><Code>0321301</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>二戸市石切所＊</Name><Code>0321321</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>八幡平市</Name><Code>0321400</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>八幡平市叺田＊</Name><Code>0321431</Code><Int>2</Int></IntensityStation>
+<IntensityStation><Name>八幡平市大更</Name><Code>0321400</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>八幡平市田頭＊</Name><Code>0321420</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>八幡平市野駄＊</Name><Code>0321432</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>一戸町</Name><Code>0352400</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>一戸町高善寺＊</Name><Code>0352430</Code><Int>2</Int></IntensityStation>
+</City>
+<City><Name>盛岡市</Name><Code>0320100</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>盛岡市薮川＊</Name><Code>0320121</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>盛岡市渋民＊</Name><Code>0320130</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>葛巻町</Name><Code>0330200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>葛巻町葛巻元木</Name><Code>0330200</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>葛巻町役場＊</Name><Code>0330230</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>岩手町</Name><Code>0330300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>岩手町五日市＊</Name><Code>0330330</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>青森県</Name><Code>02</Code><MaxInt>2</MaxInt>
+<Area><Name>青森県三八上北</Name><Code>202</Code><MaxInt>2</MaxInt>
+<City><Name>三戸町</Name><Code>0244100</Code><MaxInt>2</MaxInt>
+<IntensityStation><Name>三戸町在府小路町＊</Name><Code>0244131</Code><Int>2</Int></IntensityStation>
+</City>
+<City><Name>八戸市</Name><Code>0220300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>八戸市南郷＊</Name><Code>0220331</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>五戸町</Name><Code>0244200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>五戸町古舘</Name><Code>0244200</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>田子町</Name><Code>0244300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>田子町田子＊</Name><Code>0244331</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>青森南部町</Name><Code>0244500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>青森南部町苫米地＊</Name><Code>0244534</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>階上町</Name><Code>0244600</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>階上町道仏＊</Name><Code>0244631</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+<Pref><Name>秋田県</Name><Code>05</Code><MaxInt>1</MaxInt>
+<Area><Name>秋田県内陸北部</Name><Code>232</Code><MaxInt>1</MaxInt>
+<City><Name>小坂町</Name><Code>0530300</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>小坂町小坂砂森＊</Name><Code>0530320</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

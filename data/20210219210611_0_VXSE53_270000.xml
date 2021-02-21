@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-19T21:06:11Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>大阪管区気象台</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-20T06:06:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-20T06:06:00+09:00</TargetDateTime>
+<EventID>20210220060309</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>２０日０６時０３分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-20T06:03:00+09:00</OriginTime>
+<ArrivalTime>2021-02-20T06:03:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>奄美大島近海</Name>
+<Code type="震央地名">793</Code>
+<jmx_eb:Coordinate description="北緯２８．３度　東経１２９．６度　深さ　３０ｋｍ" datum="日本測地系">+28.3+129.6-30000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．３">3.3</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>1</MaxInt>
+<Pref><Name>鹿児島県</Name><Code>46</Code><MaxInt>1</MaxInt>
+<Area><Name>鹿児島県奄美北部</Name><Code>778</Code><MaxInt>1</MaxInt>
+<City><Name>奄美市</Name><Code>4622200</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>奄美市名瀬港町</Name><Code>4622200</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>奄美市笠利町里＊</Name><Code>4622221</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>宇検村</Name><Code>4652400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>宇検村湯湾＊</Name><Code>4652431</Code><Int>1</Int></IntensityStation>
+</City>
+<City><Name>瀬戸内町</Name><Code>4652500</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>瀬戸内町西古見</Name><Code>4652500</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>瀬戸内町古仁屋＊</Name><Code>4652520</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>瀬戸内町請島＊</Name><Code>4652531</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>瀬戸内町加計呂麻島＊</Name><Code>4652533</Code><Int>1</Int></IntensityStation>
+<IntensityStation><Name>瀬戸内町与路島＊</Name><Code>4652534</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+<VarComment codeType="固定付加文">
+<Text>＊印は気象庁以外の震度観測点についての情報です。</Text>
+<Code>0262</Code>
+</VarComment>
+</Comments>
+</Body>
+</Report>

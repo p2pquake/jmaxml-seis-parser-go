@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2021-02-19T01:27:05Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源・震度情報</Title>
+<ReportDateTime>2021-02-19T10:27:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-19T10:27:00+09:00</TargetDateTime>
+<EventID>20210219102409</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>１９日１０時２４分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-19T10:24:00+09:00</OriginTime>
+<ArrivalTime>2021-02-19T10:24:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>福島県沖</Name>
+<Code type="震央地名">289</Code>
+<jmx_eb:Coordinate description="北緯３６．９度　東経１４１．１度　深さ　５０ｋｍ" datum="日本測地系">+36.9+141.1-50000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ３．３">3.3</jmx_eb:Magnitude>
+</Earthquake>
+<Intensity>
+<Observation>
+<CodeDefine>
+<Type xpath="Pref/Code">地震情報／都道府県等</Type>
+<Type xpath="Pref/Area/Code">地震情報／細分区域</Type>
+<Type xpath="Pref/Area/City/Code">気象・地震・火山情報／市町村等</Type>
+<Type xpath="Pref/Area/City/IntensityStation/Code">震度観測点</Type>
+</CodeDefine>
+<MaxInt>1</MaxInt>
+<Pref><Name>福島県</Name><Code>07</Code><MaxInt>1</MaxInt>
+<Area><Name>福島県浜通り</Name><Code>251</Code><MaxInt>1</MaxInt>
+<City><Name>川内村</Name><Code>0754400</Code><MaxInt>1</MaxInt>
+<IntensityStation><Name>川内村下川内</Name><Code>0754400</Code><Int>1</Int></IntensityStation>
+</City>
+</Area>
+</Pref>
+</Observation>
+</Intensity>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+</Comments>
+</Body>
+</Report>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源に関する情報</Title>
+<DateTime>2021-02-20T13:26:42Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>震源に関する情報</Title>
+<ReportDateTime>2021-02-20T22:26:00+09:00</ReportDateTime>
+<TargetDateTime>2021-02-20T22:26:00+09:00</TargetDateTime>
+<EventID>20210220222343</EventID>
+<InfoType>発表</InfoType>
+<Serial></Serial>
+<InfoKind>震源速報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>きょう２０日２２時２３分ころ、地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2021-02-20T22:23:00+09:00</OriginTime>
+<ArrivalTime>2021-02-20T22:23:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>北海道東方沖</Name>
+<Code type="震央地名">188</Code>
+<jmx_eb:Coordinate description="北緯４３．３度　東経１４６．９度　深さ　５０ｋｍ" datum="日本測地系">+43.3+146.9-50000/</jmx_eb:Coordinate>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" description="Ｍ５．０">5.0</jmx_eb:Magnitude>
+</Earthquake>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>この地震による津波の心配はありません。</Text>
+<Code>0215</Code>
+</ForecastComment>
+</Comments>
+</Body>
+</Report>
