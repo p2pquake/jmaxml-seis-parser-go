@@ -92,7 +92,7 @@ func hasEarthquake(vxse vxse.Report) bool {
 
 func earthquakeTime(vxse vxse.Report) vxse.DateTime {
 	if hasEarthquake(vxse) {
-		return vxse.Body.Earthquake[0].OriginTime
+		return vxse.Body.Earthquake[0].ArrivalTime
 	}
 
 	return vxse.Head.TargetDateTime

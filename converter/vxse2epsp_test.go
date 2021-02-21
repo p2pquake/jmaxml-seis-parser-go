@@ -19,7 +19,7 @@ func TestSmoke(t *testing.T) {
 	testDirectorySmoke(t, "../data")
 }
 
-func TestCompareOldAnalyzer(t *testing.T) {
+func TestCompareToHTMLAnalyzer(t *testing.T) {
 	dir := "../data"
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
@@ -70,15 +70,21 @@ func TestCompareOldAnalyzer(t *testing.T) {
 			panic(err)
 		}
 
-		// パーツごとに比較
-		assert.Equal(t, expected.Expire, actual.Expire)
-		assert.Equal(t, expected.Issue, actual.Issue)
-		assert.Equal(t, expected.Earthquake, actual.Earthquake)
+		// データは一部補正する
+		// 発表日時については、秒を削る
+		expected.Issue.Time = expected.Issue.Time[:16]
+		actual.Issue.Time = actual.Issue.Time[:16]
 
 		// 震度観測点については、震度観測点名でソートする
 		sort.Slice(expected.Points, func(i, j int) bool { return expected.Points[i].Addr > expected.Points[j].Addr })
 		sort.Slice(actual.Points, func(i, j int) bool { return actual.Points[i].Addr > actual.Points[j].Addr })
-		assert.Equal(t, expected.Points, actual.Points)
+
+		// パーツごとに比較
+		assert.Equal(t, expected, *actual, file.Name())
+		// assert.Equal(t, expected.Expire, actual.Expire, file.Name())
+		// assert.Equal(t, expected.Issue, actual.Issue, file.Name())
+		// assert.Equal(t, expected.Earthquake, actual.Earthquake, file.Name())
+		// assert.Equal(t, expected.Points, actual.Points, file.Name())
 	}
 }
 
