@@ -1,0 +1,16 @@
+name: Golang CI
+on: push
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup
+        uses: actions/setup-go@v2
+      - name: install
+        run: go mod download
+      - name: test
+        run: go test -v ./...
+
