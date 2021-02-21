@@ -60,15 +60,15 @@ func issueType(head vxse.Head) string {
 		return "Foreign"
 	}
 
-	if strings.Contains(head.InfoKind, "震度") {
-		return "ScalePrompt"
-	}
-	if strings.Contains(head.InfoKind, "震源") {
-		return "Destination"
-	}
-	if strings.Contains(head.InfoKind, "地震") {
-		return "DetailScale"
-	}
+	// if strings.Contains(head.InfoKind, "震度速報") {
+	// 	return "ScalePrompt"
+	// }
+	// if strings.Contains(head.InfoKind, "震源") {
+	// 	return "Destination"
+	// }
+	// if strings.Contains(head.InfoKind, "地震") {
+	// 	return "DetailScale"
+	// }
 
 	return "Other"
 }
@@ -146,7 +146,7 @@ func hypocenter(vxse vxse.Report) epsp.Hypocenter {
 		}
 	}
 
-	if len(groups) >= 4 {
+	if len(groups) >= 4 && len(groups[3]) > 0 {
 		depth, err = strconv.Atoi(groups[3])
 		if err != nil {
 			depth = -1
@@ -218,6 +218,29 @@ func domesticTsunami(vxse vxse.Report) string {
 		return "Checking"
 	}
 
+	text := comments(vxse)
+	if issueType(vxse.Head) == "Foreign" {
+		if strings.Contains(text, "津波の心配はありません") || strings.Contains(text, "津波の影響はありません") {
+			return "None"
+		}
+		if strings.Contains(text, "若干の海面変動") {
+			return "NonEffective"
+		}
+		if strings.Contains(text, "調査中です") {
+			return "Checking"
+		}
+	} else {
+		if strings.Contains(text, "津波の心配はありません") {
+			return "None"
+		}
+		if strings.Contains(text, "若干の海面変動") {
+			return "NonEffective"
+		}
+		if (strings.Contains(text, "津波注意報") || strings.Contains(text, "津波警報")) && strings.Contains(text, "発表") {
+			return "Warning"
+		}
+	}
+
 	return "Unknown"
 }
 
@@ -257,11 +280,26 @@ func foreignTsunami(vxse vxse.Report) string {
 		return "Potential"
 	}
 
+	text := comments(vxse)
+	if strings.Contains(text, "この地震による津波の心配はありません") {
+		return "None"
+	}
+
 	return "Unknown"
 }
 
 func commentCodes(vxse vxse.Report) string {
+	if len(vxse.Body.Comments) == 0 {
+		return ""
+	}
 	return vxse.Body.Comments[0].ForecastComment.Code + vxse.Body.Comments[0].VarComment.Code
+}
+
+func comments(vxse vxse.Report) string {
+	if len(vxse.Body.Comments) == 0 {
+		return ""
+	}
+	return vxse.Body.Comments[0].ForecastComment.Text + vxse.Body.Comments[0].VarComment.Text
 }
 
 func generatePoints(vxse vxse.Report) []epsp.Point {
