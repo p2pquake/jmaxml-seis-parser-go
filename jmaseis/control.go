@@ -1,4 +1,4 @@
-package vxse
+package jmaseis
 
 // 管理部
 type Control struct {

@@ -1,4 +1,4 @@
-package vxse
+package jmaseis
 
 import (
 	"encoding/xml"
@@ -8,6 +8,7 @@ import (
 // W3C XML Schema dateTime 型による日付時刻表記
 // FIXME: Golang time.Time 型への変換未対応
 type DateTime time.Time
+type Duration string
 
 func (dateTime *DateTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	var s string

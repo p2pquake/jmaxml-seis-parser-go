@@ -8,7 +8,7 @@ import (
 	"log"
 
 	"github.com/p2pquake/jmaxml-vxse-parser-go/converter"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/vxse"
+	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
 	"github.com/spf13/cobra"
 )
 
@@ -23,11 +23,13 @@ var convertCmd = &cobra.Command{
 var pretty bool
 var force bool
 var ignoreWarning bool
+var tsunami bool
 
 func init() {
 	convertCmd.Flags().BoolVarP(&pretty, "pretty", "p", false, "Pretty print")
 	convertCmd.Flags().BoolVarP(&force, "force", "f", false, "Ignore validation error")
 	convertCmd.Flags().BoolVarP(&ignoreWarning, "ignore-warning", "w", false, "Ignore validation warning")
+	convertCmd.Flags().BoolVarP(&tsunami, "tsunami", "t", false, "Parse tsunami forecasts")
 
 	rootCmd.AddCommand(convertCmd)
 }
@@ -45,44 +47,81 @@ func convert(cmd *cobra.Command, args []string) {
 		log.Fatalf("%s read error: %#v", filename, err)
 	}
 
-	report := &vxse.Report{}
+	report := &jmaseis.Report{}
 	err = xml.Unmarshal(data, &report)
 	if err != nil {
 		log.Fatalf("%s parse error: %#v", filename, err)
 	}
 
-	// 変換
-	jmaQuake, err := converter.Vxse2Epsp(*report)
-	if err != nil {
-		log.Fatalf("%s convert error: %#v", filename, err)
-	}
-
-	// 検証
-	errors := converter.Validate(filename, jmaQuake)
-	for _, err := range errors {
-		_, ok := err.(converter.ValidationError)
-		if ok && !force {
-			log.Fatalf("%s has validation errors: %#v", filename, errors)
+	if tsunami {
+		// 変換
+		jmaTsunami, err := converter.Vtse2Epsp(*report)
+		if err != nil {
+			log.Fatalf("%s convert error: %#v", filename, err)
 		}
-	}
 
-	for _, err := range errors {
-		_, ok := err.(converter.ValidationWarning)
-		if ok && !force && !ignoreWarning {
-			log.Fatalf("%s has validation warnings: %#v", filename, errors)
+		// 検証
+		errors := converter.ValidateJMATsunami(filename, jmaTsunami)
+		for _, err := range errors {
+			_, ok := err.(converter.ValidationError)
+			if ok && !force {
+				log.Fatalf("%s has validation errors: %#v", filename, errors)
+			}
 		}
-	}
 
-	// 出力
-	if pretty {
-		data, err = json.MarshalIndent(jmaQuake, "", "  ")
+		for _, err := range errors {
+			_, ok := err.(converter.ValidationWarning)
+			if ok && !force && !ignoreWarning {
+				log.Fatalf("%s has validation warnings: %#v", filename, errors)
+			}
+		}
+
+		// 出力
+		if pretty {
+			data, err = json.MarshalIndent(jmaTsunami, "", "  ")
+		} else {
+			data, err = json.Marshal(jmaTsunami)
+		}
+
+		if err != nil {
+			log.Fatalf("%s JSON conversion error: %#v", filename, err)
+		}
+
+		fmt.Println(string(data))
 	} else {
-		data, err = json.Marshal(jmaQuake)
-	}
+		// 変換
+		jmaQuake, err := converter.Vxse2Epsp(*report)
+		if err != nil {
+			log.Fatalf("%s convert error: %#v", filename, err)
+		}
 
-	if err != nil {
-		log.Fatalf("%s JSON conversion error: %#v", filename, err)
-	}
+		// 検証
+		errors := converter.ValidateJMAQuake(filename, jmaQuake)
+		for _, err := range errors {
+			_, ok := err.(converter.ValidationError)
+			if ok && !force {
+				log.Fatalf("%s has validation errors: %#v", filename, errors)
+			}
+		}
 
-	fmt.Println(string(data))
+		for _, err := range errors {
+			_, ok := err.(converter.ValidationWarning)
+			if ok && !force && !ignoreWarning {
+				log.Fatalf("%s has validation warnings: %#v", filename, errors)
+			}
+		}
+
+		// 出力
+		if pretty {
+			data, err = json.MarshalIndent(jmaQuake, "", "  ")
+		} else {
+			data, err = json.Marshal(jmaQuake)
+		}
+
+		if err != nil {
+			log.Fatalf("%s JSON conversion error: %#v", filename, err)
+		}
+
+		fmt.Println(string(data))
+	}
 }

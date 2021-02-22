@@ -1,26 +1,16 @@
 package converter
 
 import (
-	"fmt"
 	"log"
 	"regexp"
 	"strconv"
 	"strings"
 
 	"github.com/p2pquake/jmaxml-vxse-parser-go/epsp"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/vxse"
+	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
 )
 
-type NotSupportedError struct {
-	Key   string
-	Value interface{}
-}
-
-func (e *NotSupportedError) Error() string {
-	return fmt.Sprintf("Not supported: key[%s] value[%#v]", e.Key, e.Value)
-}
-
-func Vxse2Epsp(vxse vxse.Report) (*epsp.JMAQuake, error) {
+func Vxse2Epsp(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
 	// "取消" は未対応
 	if vxse.Head.InfoType == "取消" {
 		return nil, &NotSupportedError{Key: "vxse.Head.InfoType", Value: vxse.Head.InfoType}
@@ -46,7 +36,7 @@ func Vxse2Epsp(vxse vxse.Report) (*epsp.JMAQuake, error) {
 	return &jmaQuake, nil
 }
 
-func issueType(head vxse.Head) string {
+func issueType(head jmaseis.Head) string {
 	if head.Title == "震度速報" {
 		return "ScalePrompt"
 	}
@@ -73,7 +63,7 @@ func issueType(head vxse.Head) string {
 	return "Other"
 }
 
-func hasEarthquake(vxse vxse.Report) bool {
+func hasEarthquake(vxse jmaseis.Report) bool {
 	if vxse.Head.InfoType == "取消" {
 		return false
 	}
@@ -90,7 +80,7 @@ func hasEarthquake(vxse vxse.Report) bool {
 	return false
 }
 
-func earthquakeTime(vxse vxse.Report) vxse.DateTime {
+func earthquakeTime(vxse jmaseis.Report) jmaseis.DateTime {
 	if hasEarthquake(vxse) {
 		return vxse.Body.Earthquake[0].ArrivalTime
 	}
@@ -98,7 +88,7 @@ func earthquakeTime(vxse vxse.Report) vxse.DateTime {
 	return vxse.Head.TargetDateTime
 }
 
-func hypocenter(vxse vxse.Report) epsp.Hypocenter {
+func hypocenter(vxse jmaseis.Report) epsp.Hypocenter {
 	if !hasEarthquake(vxse) {
 		return epsp.Hypocenter{
 			Name:      "",
@@ -165,7 +155,7 @@ func hypocenter(vxse vxse.Report) epsp.Hypocenter {
 	}
 }
 
-func maxScale(vxse vxse.Report) int {
+func maxScale(vxse jmaseis.Report) int {
 	return scale(vxse.Body.Intensity.Observation.MaxInt)
 }
 
@@ -198,7 +188,7 @@ func scale(s string) int {
 	return -1
 }
 
-func domesticTsunami(vxse vxse.Report) string {
+func domesticTsunami(vxse jmaseis.Report) string {
 	if issueType(vxse.Head) == "ScalePrompt" {
 		return "Checking"
 	}
@@ -244,7 +234,7 @@ func domesticTsunami(vxse vxse.Report) string {
 	return "Unknown"
 }
 
-func foreignTsunami(vxse vxse.Report) string {
+func foreignTsunami(vxse jmaseis.Report) string {
 	if issueType(vxse.Head) != "Foreign" {
 		return "Unknown"
 	}
@@ -288,21 +278,21 @@ func foreignTsunami(vxse vxse.Report) string {
 	return "Unknown"
 }
 
-func commentCodes(vxse vxse.Report) string {
+func commentCodes(vxse jmaseis.Report) string {
 	if len(vxse.Body.Comments) == 0 {
 		return ""
 	}
 	return vxse.Body.Comments[0].ForecastComment.Code + vxse.Body.Comments[0].VarComment.Code
 }
 
-func comments(vxse vxse.Report) string {
+func comments(vxse jmaseis.Report) string {
 	if len(vxse.Body.Comments) == 0 {
 		return ""
 	}
 	return vxse.Body.Comments[0].ForecastComment.Text + vxse.Body.Comments[0].VarComment.Text
 }
 
-func generatePoints(vxse vxse.Report) []epsp.Point {
+func generatePoints(vxse jmaseis.Report) []epsp.Point {
 	points := []epsp.Point{}
 
 	// 震度速報: 地域

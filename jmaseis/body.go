@@ -1,4 +1,4 @@
-package vxse
+package jmaseis
 
 // 内容部
 type Body struct {
@@ -6,6 +6,7 @@ type Body struct {
 	Intensity  Intensity    // 震度 (任意項目、震度速報、震源・震度に関する情報で 0-1 回。 Head/InfoType = "取消" では出現しない)
 	Text       string       // テキスト要素 (任意項目。例えば Head/InfoType = "取消" での取消概要等)
 	Comments   []Comment    // 付加文 (任意項目。地震情報では 0-1 回。 Head/InfoType = "取消" では出現しない)
+	Tsunami    Tsunami      // 津波 (任意項目。 Head/InfoType = "取消" では出現しない)
 	// Tsunami
 	// Naming
 	// Tokai
@@ -161,4 +162,99 @@ type CommentForm struct {
 	CodeType string `xml:"codeType,attr"` // "固定付加文"
 	Text     string // 複数の固定付加文を記載する場合、改行して併記
 	Code     string // 複数の固定付加文を記載する場合、 xs:list (空白区切り) として併記
+}
+
+// 津波
+type Tsunami struct {
+	Release     string        // (任意項目)
+	Observation TsunamiDetail // (任意項目)
+	Estimation  TsunamiDetail // (任意項目)
+	Forecast    TsunamiDetail // 津波の予測値 (任意項目。津波警報・注意報・予報 では必須)
+}
+
+// 津波警報・注意報・予報の場合、津波の予測値
+type TsunamiDetail struct {
+	CodeDefine CodeDefine    // (任意項目)
+	Item       []TsunamiItem // 津波警報・注意報・予報の場合、津波の予測値（津波予報区毎）
+}
+
+// 津波警報・注意報・予報の場合、津波の予測値（津波予報区毎）
+type TsunamiItem struct {
+	Area        ForecastArea     // 津波予報区
+	Category    Category         // 津波警報等の種類 (任意項目。津波警報・注意報・予報では必須)
+	FirstHeight FirstHeight      // 津波の到達予想時刻 (任意項目。津波警報・注意報を解除または津波予報（若干の海面変動）を発表している予報区では出現しない)
+	MaxHeight   MaxHeight        // 予想される津波の高さ (任意項目)
+	Duration    Duration         // (任意項目)
+	Station     []TsunamiStation // (任意項目)
+}
+
+type ForecastArea struct {
+	Name string
+	Code string
+	City []ForecastCity // (任意項目)
+}
+
+type ForecastCity struct {
+	Name string
+	Code string
+}
+
+// 津波警報等の種類
+type Category struct {
+	Kind     Kind // 津波警報等の発表状況。大津波警報については、第 1 報を含めて新たに大津波警報となる津波予報区で "大津波警報：発表" 、継続で "大津波警報" と記載
+	LastKind Kind // 一つ前の情報による発表状況 (任意項目)
+}
+
+// 発表状況
+type Kind struct {
+	Name string
+	Code string
+}
+
+// 津波の到達予想時刻
+type FirstHeight struct {
+	ArrivalTimeFrom DateTime      // (任意項目)
+	ArrivalTimeTo   DateTime      // (任意項目)
+	ArrivalTime     DateTime      // 第 1 波の到達予想時刻 (任意項目。第 1 波が到達または到達と推測される場合は出現しない)
+	Condition       string        // NULL / "ただちに津波来襲と予測" / "津波到達中と推測" / "第１波の到達を確認" (任意項目)
+	Initial         string        // (任意項目)
+	TsunamiHeight   TsunamiHeight // (任意項目)
+	Revise          string        // NULL / "追加"/ "更新" (任意項目)
+	Period          float64       // (任意項目)
+}
+
+// 予想される津波の高さ
+type MaxHeight struct {
+	DateTime          DateTime      // (任意項目)
+	Condition         string        // 大津波警報の予想高さが最初に発表された場合や上方修正された場合 "重要" (任意項目)
+	TsunamiHeightFrom TsunamiHeight // (任意項目)
+	TsunamiHeightTo   TsunamiHeight // (任意項目)
+	TsunamiHeight     TsunamiHeight // 予想される津波の高さ(メートル単位) (任意項目)
+	Revise            string        // NULL / "追加" / "更新" (任意項目)
+	Period            float64       // (任意項目)
+}
+
+type CurrentHeight struct {
+	StartTime     DateTime      // (任意項目)
+	EndTime       DateTime      // (任意項目)
+	Condition     string        // (任意項目)
+	TsunamiHeight TsunamiHeight // (任意項目)
+}
+
+type TsunamiStation struct {
+	Name             string
+	Code             string
+	Sensor           string   // (任意項目)
+	HighTideDateTime DateTime // (任意項目)
+	FirstHeight      FirstHeight
+	MaxHeight        MaxHeight     // (任意項目)
+	CurrentHeight    CurrentHeight // (任意項目)
+}
+
+type TsunamiHeight struct {
+	Type        string `xml:"type,attr"`        // "津波の高さ"
+	Unit        string `xml:"unit,attr"`        // "m"
+	Condition   string `xml:"condition,attr"`   // 定性的表現 "巨大" / "高い" / NULL (任意項目)
+	Description string `xml:"description,attr"` // "１０ｍ超" / "１０ｍ" / "５ｍ" / "３ｍ" / "１ｍ" / "０．２ｍ未満" / 高さ (任意項目)
+	Value       string `xml:",chardata"`        // 定性的表現の場合 "NaN"
 }

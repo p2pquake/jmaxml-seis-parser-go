@@ -19,14 +19,27 @@ func (e ValidationError) Error() string {
 	return fmt.Sprintf("EPSP validation error: %s", string(e))
 }
 
-func Validate(filename string, jmaQuake *epsp.JMAQuake) []error {
+func ValidateJMAQuake(filename string, jmaQuake *epsp.JMAQuake) []error {
 	errors := []error{}
-	errors = append(errors, ValidateIssueType(filename, jmaQuake)...)
-	errors = append(errors, ValidateTsunami(filename, jmaQuake)...)
+	errors = append(errors, validateJMAQuakeIssueType(filename, jmaQuake)...)
+	errors = append(errors, validateJMAQuakeTsunami(filename, jmaQuake)...)
 	return errors
 }
 
-func ValidateIssueType(filename string, jmaQuake *epsp.JMAQuake) []error {
+func ValidateJMATsunami(filename string, jmaTsunami *epsp.JMATsunami) []error {
+	errors := []error{}
+
+	if jmaTsunami.Cancelled && len(jmaTsunami.Areas) > 0 {
+		errors = append(errors, ValidationError(fmt.Sprintf("%s is cancelled, but has areas", filename)))
+	}
+	if !jmaTsunami.Cancelled && len(jmaTsunami.Areas) <= 0 {
+		errors = append(errors, ValidationError(fmt.Sprintf("%s has no area, but is not cancelled", filename)))
+	}
+
+	return errors
+}
+
+func validateJMAQuakeIssueType(filename string, jmaQuake *epsp.JMAQuake) []error {
 	errors := []error{}
 
 	if filename == "" {
@@ -54,7 +67,7 @@ func ValidateIssueType(filename string, jmaQuake *epsp.JMAQuake) []error {
 	return errors
 }
 
-func ValidateTsunami(filename string, jmaQuake *epsp.JMAQuake) []error {
+func validateJMAQuakeTsunami(filename string, jmaQuake *epsp.JMAQuake) []error {
 	errors := []error{}
 
 	if jmaQuake.Issue.Type == "ScalePrompt" {

@@ -10,13 +10,13 @@ import (
 	"testing"
 
 	"github.com/p2pquake/jmaxml-vxse-parser-go/epsp"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/vxse"
+	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
 	"github.com/stretchr/testify/assert"
 )
 
-func TestSmoke(t *testing.T) {
-	testDirectorySmoke(t, "../examples")
-	testDirectorySmoke(t, "../data")
+func TestVXSESmoke(t *testing.T) {
+	testVXSEDirectorySmoke(t, "../examples")
+	testVXSEDirectorySmoke(t, "../data")
 }
 
 func TestCompareToHTMLAnalyzer(t *testing.T) {
@@ -27,16 +27,18 @@ func TestCompareToHTMLAnalyzer(t *testing.T) {
 	}
 
 	for _, file := range files {
-		if !strings.HasSuffix(file.Name(), ".xml") {
+		if !strings.HasSuffix(file.Name(), ".xml") || !strings.Contains(file.Name(), "VXSE") {
 			continue
 		}
+
+		t.Logf("test %s...\n", file.Name())
 
 		data, err := ioutil.ReadFile(dir + "/" + file.Name())
 		if err != nil {
 			panic(err)
 		}
 
-		v := &vxse.Report{}
+		v := &jmaseis.Report{}
 		err = xml.Unmarshal(data, &v)
 		if err != nil {
 			t.Errorf("%s parse error: %#v", file.Name(), err)
@@ -88,7 +90,7 @@ func TestCompareToHTMLAnalyzer(t *testing.T) {
 	}
 }
 
-func testDirectorySmoke(t *testing.T, dir string) {
+func testVXSEDirectorySmoke(t *testing.T, dir string) {
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
 		panic(err)
@@ -104,7 +106,7 @@ func testDirectorySmoke(t *testing.T, dir string) {
 			panic(err)
 		}
 
-		v := &vxse.Report{}
+		v := &jmaseis.Report{}
 		t.Run("Parsable", func(t *testing.T) {
 			err = xml.Unmarshal(data, &v)
 			if err != nil {
@@ -129,7 +131,7 @@ func testDirectorySmoke(t *testing.T, dir string) {
 		}
 
 		t.Run("Validate", func(t *testing.T) {
-			errors := Validate(file.Name(), e)
+			errors := ValidateJMAQuake(file.Name(), e)
 			for _, err := range errors {
 				t.Error(err)
 			}

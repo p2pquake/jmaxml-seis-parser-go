@@ -1,4 +1,4 @@
-package vxse
+package jmaseis
 
 // 気象庁防災情報XML
 type Report struct {

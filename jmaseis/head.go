@@ -1,4 +1,4 @@
-package vxse
+package jmaseis
 
 // ヘッダ部
 type Head struct {
