@@ -1,4 +1,4 @@
-module github.com/p2pquake/jmaxml-vxse-parser-go
+module github.com/p2pquake/jmaxml-seis-parser-go
 
 go 1.16
 

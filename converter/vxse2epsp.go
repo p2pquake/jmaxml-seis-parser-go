@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/p2pquake/jmaxml-vxse-parser-go/epsp"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
+	"github.com/p2pquake/jmaxml-seis-parser-go/epsp"
+	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
 func Vxse2Epsp(vxse jmaseis.Report) (*epsp.JMAQuake, error) {

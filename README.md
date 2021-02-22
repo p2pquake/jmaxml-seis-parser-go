@@ -1,6 +1,13 @@
-# jmaxml-vxse-parser-go
+# jmaxml-seis-parser-go
 
-気象庁防災情報 XML の パーサー (Go 実装、 VXSE 種の一部のみ対応)
+気象庁防災情報 XML の パーサー Go 実装
+
+## 対応フォーマット
+
+- VXSE51: 震度速報
+- VXSE52: 地震情報（震源に関する情報）
+- VXSE53: 地震情報（震源・震度に関する情報）
+- VTSE41: 津波警報・注意報・予報
 
 ## 参考
 

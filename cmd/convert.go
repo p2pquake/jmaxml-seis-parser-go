@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/p2pquake/jmaxml-vxse-parser-go/converter"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
+	"github.com/p2pquake/jmaxml-seis-parser-go/converter"
+	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 	"github.com/spf13/cobra"
 )
 

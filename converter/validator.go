@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/p2pquake/jmaxml-vxse-parser-go/epsp"
+	"github.com/p2pquake/jmaxml-seis-parser-go/epsp"
 )
 
 type ValidationWarning string

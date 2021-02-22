@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/p2pquake/jmaxml-vxse-parser-go/epsp"
-	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
+	"github.com/p2pquake/jmaxml-seis-parser-go/epsp"
+	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
 func Vtse2Epsp(vtse jmaseis.Report) (*epsp.JMATsunami, error) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/p2pquake/jmaxml-vxse-parser-go/jmaseis"
+	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
 type NotSupportedError struct {
