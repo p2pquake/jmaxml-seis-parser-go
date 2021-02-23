@@ -1,0 +1,22 @@
+builds:
+  -
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - arm64
+      - amd64
+    ldflags:
+      - -s -w
+      - -X github.com/p2pquake/jmaxml-seis-parser-go/cmd.Version={{.Version}}
+      - -X github.com/p2pquake/jmaxml-seis-parser-go/cmd.Commit={{.Commit}}
+      - -X github.com/p2pquake/jmaxml-seis-parser-go/cmd.Date={{.Date}}
+
+archives:
+  -
+    format: zip
+    files:
+      - README.md
+      - LICENSE
+
