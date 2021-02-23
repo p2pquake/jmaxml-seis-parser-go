@@ -108,7 +108,7 @@ func hypocenter(vxse jmaseis.Report) epsp.Hypocenter {
 
 	// FIXME: マグニチュード "NaN" での動作検証
 	m := vxse.Body.Earthquake[0].Magnitude[0]
-	magnitude := m.Value
+	magnitude := float64(m.Value)
 	if m.Condition == "不明" {
 		magnitude = -1
 	}

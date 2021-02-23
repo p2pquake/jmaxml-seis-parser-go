@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 
 	"github.com/p2pquake/jmaxml-seis-parser-go/converter"
 	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
@@ -15,7 +16,7 @@ import (
 var convertCmd = &cobra.Command{
 	Use:   "convert [FILE]",
 	Short: "XML から EPSP JSON 形式への変換",
-	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake) 形式への変換を行います。\nファイル未指定の場合は標準入力から変換します。",
+	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake) 形式への変換を行います。",
 	Args:  cobra.MaximumNArgs(1),
 	Run:   convert,
 }
@@ -37,7 +38,9 @@ func init() {
 func convert(cmd *cobra.Command, args []string) {
 	// 入力
 	if len(args) == 0 {
-		log.Fatalln("STDIN is not supported.")
+		log.Println("STDIN is not supported.")
+		cmd.Help()
+		os.Exit(1)
 	}
 
 	filename := args[0]

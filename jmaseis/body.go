@@ -70,10 +70,10 @@ type Coordinate struct {
 
 // マグニチュード
 type Magnitude struct {
-	Type        string  `xml:"type,attr"`        // マグニチュードの種別 ("Mj" など)
-	Condition   string  `xml:"condition,attr"`   // 不明な場合や 8 を超える巨大地震と推定される場合 "不明" (任意項目)
-	Description string  `xml:"description,attr"` // 文字列表現 (任意項目)
-	Value       float64 `xml:",chardata"`        // マグニチュード。不明または 8 を超える巨大地震と推定される場合 "NaN"
+	Type        string         `xml:"type,attr"`        // マグニチュードの種別 ("Mj" など)
+	Condition   string         `xml:"condition,attr"`   // 不明な場合や 8 を超える巨大地震と推定される場合 "不明" (任意項目)
+	Description string         `xml:"description,attr"` // 文字列表現 (任意項目)
+	Value       MagnitudeValue `xml:",chardata"`        // マグニチュード。不明または 8 を超える巨大地震と推定される場合 "NaN"
 }
 
 // 震度

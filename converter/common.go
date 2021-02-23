@@ -22,5 +22,5 @@ func EPSPTime(dt jmaseis.DateTime) string {
 		panic(err)
 	}
 
-	return dt.Time().In(loc).Format("2006/01/02 15:04:05")
+	return time.Time(dt).In(loc).Format("2006/01/02 15:04:05")
 }
