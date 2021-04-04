@@ -37,6 +37,7 @@ $ ./jmaxml-seis-parser-go convert data/20210216071046_0_VXSE53_270000.xml
 ## 参考
 
 - [気象庁 | 気象庁防災情報XMLフォーマット](http://xml.kishou.go.jp/)
+- [p2pquake/dmdata-jp-api-v2-websocket-client: DMDATA.JP (Project DM-D.S.S) API v2 の非公式 WebSocket クライアント](https://github.com/p2pquake/dmdata-jp-api-v2-websocket-client)
 
 ## ライセンス
 
