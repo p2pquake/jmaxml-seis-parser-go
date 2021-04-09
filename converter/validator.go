@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/p2pquake/jmaxml-seis-parser-go/epsp"
+	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
 type ValidationWarning string
@@ -19,15 +20,24 @@ func (e ValidationError) Error() string {
 	return fmt.Sprintf("EPSP validation error: %s", string(e))
 }
 
-func ValidateJMAQuake(filename string, jmaQuake *epsp.JMAQuake) []error {
+func ValidateJMAQuake(filename string, report *jmaseis.Report, jmaQuake *epsp.JMAQuake) []error {
 	errors := []error{}
+
+	if report.Control.Status != "通常" {
+		errors = append(errors, ValidationWarning(fmt.Sprintf("Control.Status is training or exam (%s).", report.Control.Status)))
+	}
+
 	errors = append(errors, validateJMAQuakeIssueType(filename, jmaQuake)...)
 	errors = append(errors, validateJMAQuakeTsunami(filename, jmaQuake)...)
 	return errors
 }
 
-func ValidateJMATsunami(filename string, jmaTsunami *epsp.JMATsunami) []error {
+func ValidateJMATsunami(filename string, report *jmaseis.Report, jmaTsunami *epsp.JMATsunami) []error {
 	errors := []error{}
+
+	if report.Control.Status != "通常" {
+		errors = append(errors, ValidationWarning(fmt.Sprintf("Control.Status is training or exam (%s).", report.Control.Status)))
+	}
 
 	if jmaTsunami.Cancelled && len(jmaTsunami.Areas) > 0 {
 		errors = append(errors, ValidationError(fmt.Sprintf("%s is cancelled, but has areas", filename)))

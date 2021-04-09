@@ -64,7 +64,7 @@ func convert(cmd *cobra.Command, args []string) {
 		}
 
 		// 検証
-		errors := converter.ValidateJMATsunami(filename, jmaTsunami)
+		errors := converter.ValidateJMATsunami(filename, report, jmaTsunami)
 		for _, err := range errors {
 			_, ok := err.(converter.ValidationError)
 			if ok && !force {
@@ -99,7 +99,7 @@ func convert(cmd *cobra.Command, args []string) {
 		}
 
 		// 検証
-		errors := converter.ValidateJMAQuake(filename, jmaQuake)
+		errors := converter.ValidateJMAQuake(filename, report, jmaQuake)
 		for _, err := range errors {
 			_, ok := err.(converter.ValidationError)
 			if ok && !force {

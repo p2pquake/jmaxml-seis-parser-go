@@ -58,9 +58,20 @@ func testVTSEDirectorySmoke(t *testing.T, dir string) {
 		}
 
 		t.Run("Validate", func(t *testing.T) {
-			errors := ValidateJMATsunami(file.Name(), e)
+			errors := ValidateJMATsunami(file.Name(), v, e)
 			for _, err := range errors {
-				t.Error(err)
+				// 訓練データは ValidationWarning で正しい
+				if strings.Contains(err.Error(), "訓練") {
+					if !strings.Contains(string(data), "<Status>訓練</Status>") {
+						t.Error(err)
+					}
+				} else if strings.Contains(err.Error(), "試験") {
+					if !strings.Contains(string(data), "<Status>試験</Status>") {
+						t.Error(err)
+					}
+				} else {
+					t.Error(err)
+				}
 			}
 		})
 	}
