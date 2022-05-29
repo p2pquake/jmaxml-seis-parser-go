@@ -102,7 +102,7 @@ func validateJMAQuakeTsunami(filename string, jmaQuake *epsp.JMAQuake) []error {
 		if !regexp.MustCompile("^(Checking|None|NonEffective|Watch|Warning)$").MatchString(jmaQuake.Earthquake.DomesticTsunami) {
 			errors = append(errors, ValidationWarning(fmt.Sprintf("%s (%s) domesticTsunami is not valid (%s)", filename, jmaQuake.Issue.Type, jmaQuake.Earthquake.DomesticTsunami)))
 		}
-		if !regexp.MustCompile("^(None|Checking|NonEffectiveNearby|WarningNearby|WarningPacific|WarningPacificWide|WarningIndian|WarningIndianWide|Potential)$").MatchString(jmaQuake.Earthquake.ForeignTsunami) {
+		if !regexp.MustCompile("^(None|Checking|NonEffectiveNearby|WarningNearby|WarningPacific|WarningPacificWide|WarningIndian|WarningIndianWide|Potential|Unknown)$").MatchString(jmaQuake.Earthquake.ForeignTsunami) {
 			errors = append(errors, ValidationWarning(fmt.Sprintf("%s (%s) foreignTsunami is not valid (%s)", filename, jmaQuake.Issue.Type, jmaQuake.Earthquake.ForeignTsunami)))
 		}
 
