@@ -25,6 +25,11 @@ func (dateTime *DateTime) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 	return nil
 }
 
+func (dateTime *DateTime) MarshalJSON() ([]byte, error) {
+	t := time.Time(*dateTime)
+	return json.Marshal(t)
+}
+
 func (m *MagnitudeValue) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	var s string
 	if err := d.DecodeElement(&s, &start); err != nil {
