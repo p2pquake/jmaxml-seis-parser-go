@@ -181,6 +181,10 @@ func hasEEWEarthquake(vxse jmaseis.Report) bool {
 		return false
 	}
 
+	if vxse.Control.Status == "試験" {
+		return false
+	}
+
 	if vxse.Head.InfoKind == "緊急地震速報" {
 		return true
 	}
