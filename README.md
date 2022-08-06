@@ -4,6 +4,7 @@
 
 ## 対応フォーマット
 
+- VXSE43: 緊急地震速報（警報）
 - VXSE51: 震度速報
 - VXSE52: 地震情報（震源に関する情報）
 - VXSE53: 地震情報（震源・震度に関する情報）
@@ -15,18 +16,20 @@
 
 ```sh
 $ ./jmaxml-seis-parser-go
-気象庁防災情報 XML 地震火山情報の一部 (VXSE51, VXSE52, VXSE53, VTSE41) のパーサ
+気象庁防災情報 XML 地震火山情報の一部 (VXSE43, VXSE51, VXSE52, VXSE53, VTSE41) のパーサ
 
 Usage:
   jmaxml-seis-parser-go [command]
 
 Available Commands:
+  completion  Generate the autocompletion script for the specified shell
   convert     XML から EPSP JSON 形式への変換
   help        Help about any command
   parse       XML のパース
 
 Flags:
-  -h, --help   help for jmaxml-seis-parser-go
+  -h, --help      help for jmaxml-seis-parser-go
+  -v, --version   version for jmaxml-seis-parser-go
 
 Use "jmaxml-seis-parser-go [command] --help" for more information about a command.
 

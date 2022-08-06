@@ -16,7 +16,7 @@ import (
 var convertCmd = &cobra.Command{
 	Use:   "convert [FILE]",
 	Short: "XML から EPSP JSON 形式への変換",
-	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake) 形式への変換を行います。",
+	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake, JMATsunami, JMAEEW) 形式への変換を行います。",
 	Args:  cobra.MaximumNArgs(1),
 	Run:   convert,
 }
