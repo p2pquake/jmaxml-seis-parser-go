@@ -16,7 +16,7 @@ import (
 var convertCmd = &cobra.Command{
 	Use:   "convert [FILE]",
 	Short: "XML から EPSP JSON 形式への変換",
-	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake) 形式への変換を行います。",
+	Long:  "気象庁防災情報 XML から EPSP JSON (JMAQuake, JMATsunami, JMAEEW) 形式への変換を行います。",
 	Args:  cobra.MaximumNArgs(1),
 	Run:   convert,
 }
@@ -25,12 +25,14 @@ var pretty bool
 var force bool
 var ignoreWarning bool
 var tsunami bool
+var eew bool
 
 func init() {
 	convertCmd.Flags().BoolVarP(&pretty, "pretty", "p", false, "Pretty print")
 	convertCmd.Flags().BoolVarP(&force, "force", "f", false, "Ignore validation error")
 	convertCmd.Flags().BoolVarP(&ignoreWarning, "ignore-warning", "w", false, "Ignore validation warning")
 	convertCmd.Flags().BoolVarP(&tsunami, "tsunami", "t", false, "Parse tsunami forecasts")
+	convertCmd.Flags().BoolVarP(&eew, "eew", "e", false, "Parse EEW (Earthquake Early Warning)")
 
 	rootCmd.AddCommand(convertCmd)
 }
@@ -91,9 +93,31 @@ func convert(cmd *cobra.Command, args []string) {
 		}
 
 		fmt.Println(string(data))
+	} else if eew {
+		// 変換
+		jmaEEW, err := converter.Vxse2EpspEEW(*report)
+		if err != nil {
+			log.Fatalf("%s convert error: %#v", filename, err)
+		}
+
+		// 検証
+		// FIXME: 未実装
+
+		// 出力
+		if pretty {
+			data, err = json.MarshalIndent(jmaEEW, "", "  ")
+		} else {
+			data, err = json.Marshal(jmaEEW)
+		}
+
+		if err != nil {
+			log.Fatalf("%s JSON conversion error: %#v", filename, err)
+		}
+
+		fmt.Println(string(data))
 	} else {
 		// 変換
-		jmaQuake, err := converter.Vxse2Epsp(*report)
+		jmaQuake, err := converter.Vxse2EpspQuake(*report)
 		if err != nil {
 			log.Fatalf("%s convert error: %#v", filename, err)
 		}

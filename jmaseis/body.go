@@ -2,18 +2,18 @@ package jmaseis
 
 // 内容部
 type Body struct {
-	Earthquake []Earthquake // 地震の諸要素 (任意項目、震源に関する情報、震源・震度に関する情報で 0-1 回。 Head/InfoType = "取消" では出現しない)
-	Intensity  Intensity    // 震度 (任意項目、震度速報、震源・震度に関する情報で 0-1 回。 Head/InfoType = "取消" では出現しない)
-	Text       string       // テキスト要素 (任意項目。例えば Head/InfoType = "取消" での取消概要等)
-	Comments   []Comment    // 付加文 (任意項目。地震情報では 0-1 回。 Head/InfoType = "取消" では出現しない)
-	Tsunami    Tsunami      // 津波 (任意項目。 Head/InfoType = "取消" では出現しない)
+	Earthquake   []Earthquake // 地震の諸要素 (任意項目、震源に関する情報、震源・震度に関する情報で 0-1 回。 Head/InfoType = "取消" では出現しない)
+	Intensity    Intensity    // 震度 / 震度・長周期地震動階級 (任意項目、震度速報、震源・震度に関する情報、緊急地震速報（警報）で 0-1 回。 Head/InfoType = "取消" では出現しない)
+	Text         string       // テキスト要素 (任意項目。例えば Head/InfoType = "取消" での取消概要等)
+	Comments     []Comment    // 付加文 (任意項目。地震情報では 0-1 回。 Head/InfoType = "取消" では出現しない)
+	Tsunami      Tsunami      // 津波 (任意項目。 Head/InfoType = "取消" では出現しない)
+	NextAdvisory string       // 次回発表予定 (任意項目。緊急地震速報（警報警報）で 0-1 回。 "この情報をもって、緊急地震速報：最終報とします。")
 	// Tsunami
 	// Naming
 	// Tokai
 	// EarthquakeInfo
 	// EarthquakeCount
 	// Aftershock
-	// NextAdvisory
 }
 
 // 地震の諸要素
@@ -22,14 +22,14 @@ type Earthquake struct {
 	ArrivalTime DateTime    // 地震発現時刻 遠地地震で発現時刻不明な場合、地震発生時刻と同値 (任意項目、地震情報では必須)
 	Hypocenter  Hypocenter  // 地震の位置要素 (任意項目、地震情報では必須)
 	Magnitude   []Magnitude // マグニチュード (任意項目、震源または震源・震度に関する情報では要素数 1)
-	// Condition   string     // 任意項目
+	Condition   string      // 震源要素の補足情報 (任意項目、緊急地震速報（警報）で 0-1 回。 "仮定震源要素)）
 }
 
 // 地震の位置要素
 type Hypocenter struct {
-	Area   HypoArea // 震源位置
-	Source string   // 震源決定機関 (任意項目、遠地地震で気象庁以外の機関で決定された震源要素を採用した場合の機関略称。 "PTWC" / "WCATWC" / "USGS")
-	// Accuracy
+	Area     HypoArea // 震源位置
+	Source   string   // 震源決定機関 (任意項目、遠地地震で気象庁以外の機関で決定された震源要素を採用した場合の機関略称。 "PTWC" / "WCATWC" / "USGS")
+	Accuracy Accuracy // 精度情報 (任意項目、緊急地震速報（警報）では必須)
 }
 
 // 震源位置
@@ -38,14 +38,37 @@ type HypoArea struct {
 	Code         HypoAreaCode // 震央地名に対応するコード
 	Coordinate   []Coordinate // 震源要素 (地震情報では要素数 1)
 	DetailedName string       // 詳細震央地名 (任意項目、遠地地震において詳細な位置を発表する場合のみ)
-	// ReduceName
-	// ReduceCode
+	ReduceName   string       // 短縮用震央地名 (任意項目、緊急地震速報（警報）では必須)
+	ReduceCode   string       // 短縮用震央地名コード (任意項目、緊急地震速報（警報）では必須)
 	// DetailedCode
 	// NameFromMark
 	// MarkCode
 	// Direction
 	// Distance
 	// LandOrSea
+}
+
+// 精度情報
+type Accuracy struct {
+	Epicenter            Epicenter            // 震央位置の精度値
+	Depth                Depth                // 深さの精度値
+	MagnitudeCalculation MagnitudeCalculation // マグニチュードの精度値
+}
+
+// 震央位置の精度値
+type Epicenter struct {
+	Rank  string `xml:"rank,attr"` // 震源位置の精度のランク
+	Rank2 string `xml:"rank2,attr"` // 震源位置の精度のランク2
+}
+
+// 深さの精度値
+type Depth struct {
+	Rank string `xml:"rank,attr"` // 震源深さの精度ランク
+}
+
+// マグニチュードの精度値
+type MagnitudeCalculation struct {
+	Rank string `xml:"rank,attr"` // マグニチュード精度のランク
 }
 
 // 震央地名に対応するコード
@@ -76,10 +99,10 @@ type Magnitude struct {
 	Value       MagnitudeValue `xml:",chardata"`        // マグニチュード。不明または 8 を超える巨大地震と推定される場合 "NaN"
 }
 
-// 震度
+// 震度 / 震度・長周期地震動階級（緊急地震速報（警報）の場合）
 type Intensity struct {
 	Observation IntensityDetail // 震度の観測 (任意項目、地震情報では必須)
-	// Forecast
+	Forecast    Forecast        // 震度・長周期地震動の予測 (任意項目、緊急地震速報（警報）では必須)
 }
 
 // 震度の観測
@@ -100,12 +123,37 @@ type CodeDefineType struct {
 	Value string `xml:",chardata"`
 }
 
+// 震度・長周期地震動階級の予測
+type Forecast struct {
+	CodeDefine    CodeDefine      // コード体系の定義
+	ForecastInt   ForecastInt     // 最大予測震度
+	ForecastLgInt ForecastLgInt   // 最大予測長周期地震動階級 (任意項目)
+	Appendix      Appendix        // 予測震度・予測長周期地震動階級付加要素 (任意項目)
+	Pref          []IntensityPref // 都道府県要素
+}
+
+type ForecastInt struct {
+	From string // 最大予測震度の下限
+	To   string // 最大予測震度の上限
+}
+
+type ForecastLgInt struct {
+	From string // 最大予測長周期地震動階級の下限
+	To   string // 最大予測長周期地震動階級の上限
+}
+
+type Appendix struct {
+	MaxIntChange       string // 最大予測震度変化
+	MaxLgIntChange     string // 最大予測長周期地震動階級変化 (任意項目)
+	MaxIntChangeReason string // 最大予測値変化の理由
+}
+
 // 都道府県
 type IntensityPref struct {
 	Name   string          // 都道府県名
 	Code   string          // 都道府県名に対応するコード
 	MaxInt string          // 最大震度（都道府県） (任意項目。震源・震度に関する情報では、都道府県内に震度 5 弱以上と考えられるが震度の値を入手していない市町村のみしか存在しない場合は出現しない)
-	Area   []IntensityArea // 地域 (任意項目、地震情報では必須)
+	Area   []IntensityArea // 地域 (任意項目。地震情報、緊急地震速報（警報）では必須)
 	Revise string          // 情報の更新（都道府県） (任意項目。震源・震度に関する情報の続報について、都道府県が "追加" または震度が "上方修正" されることがある)
 	// Category
 	// ForecastInt
@@ -115,15 +163,16 @@ type IntensityPref struct {
 
 // 地域
 type IntensityArea struct {
-	Name   string
-	Code   string
-	MaxInt string          // 最大震度（地域） (任意項目。震源・震度に関する情報において、地域内に震度 5 弱以上と考えられるが震度の値を入手していない市町村のみしか存在しない場合は出現しない)
-	City   []IntensityCity // 市町村 (任意項目。震度速報では存在しない。震源・震度に関する情報では必須)
-	Revise string          // 情報の更新（地域） (任意項目。震源・震度に関する情報の続報について、地域が "追加" または震度が "上方修正" されることがある)
-	// Category
-	// ForecastInt
-	// ArrivalTime
-	// Condition
+	Name          string
+	Code          string
+	MaxInt        string           // 最大震度（地域） (任意項目。震源・震度に関する情報において、地域内に震度 5 弱以上と考えられるが震度の値を入手していない市町村のみしか存在しない場合は出現しない)
+	City          []IntensityCity  // 市町村 (任意項目。震度速報では存在しない。震源・震度に関する情報では必須)
+	Revise        string           // 情報の更新（地域） (任意項目。震源・震度に関する情報の続報について、地域が "追加" または震度が "上方修正" されることがある)
+	Category      ForecastCategory // 予報カテゴリー (任意項目、緊急地震速報（警報）のみ)
+	ForecastInt   ForecastInt      // 最大予測震度 (任意項目、緊急地震速報（警報）のみ)
+	ForecastLgInt ForecastLgInt    // 最大予測長周期地震動階級 (任意項目、緊急地震速報（警報）で 0-1 回)
+	ArrivalTime   DateTime         // 主要動の到達予測時刻 (任意項目、緊急地震速報（警報）で 0-1 回)
+	Condition     string           // 状況 (任意項目。緊急地震速報（警報）で 0-1 回。 "既に主要動到達と推測")
 }
 
 // 市町村
@@ -148,12 +197,23 @@ type IntensityStation struct {
 	// K
 }
 
+// 予報カテゴリー
+type ForecastCategory struct {
+	Kind ForecastKind
+}
+
+// 今回予報
+type ForecastKind struct {
+	Name string // 警報名
+	Code string // 警報コード
+}
+
 // 付加文
 type Comment struct {
 	ForecastComment CommentForm // 固定付加文 (任意項目。津波や緊急地震速報に関する付加的な情報)
 	VarComment      CommentForm // 固定付加文（その他） (任意項目。その他の付加的な情報)
 	FreeFormComment string      // 自由付加文 (任意項目)
-	// WarningComment
+	WarningComment  CommentForm // 固定付加文 (任意項目。緊急地震速報（警報）のみ)
 	// ObservationComment
 }
 
