@@ -14,9 +14,13 @@ func Vxse2EpspEEW(vxse jmaseis.Report) (*epsp.JMAEEW, error) {
 	if vxse.Head.InfoType == "取消" {
 		return &epsp.JMAEEW{
 			Earthquake: nil,
-			Issue:      nil,
-			Cancelled:  true,
-			Areas:      nil,
+			Issue: &epsp.EEWIssue{
+				Time:    EPSPTime(vxse.Control.DateTime),
+				EventID: vxse.Head.EventID,
+				Serial:  vxse.Head.Serial,
+			},
+			Cancelled: true,
+			Areas:     nil,
 		}, nil
 	}
 
