@@ -24,6 +24,14 @@ func Vxse2EpspEEW(vxse jmaseis.Report) (*epsp.JMAEEW, error) {
 		}, nil
 	}
 
+	if vxse.Control.Status == "試験" {
+		return nil, &NotSupportedError{Key: "vxse.Head.InfoKind", Value: vxse.Head.InfoKind}
+	}
+
+	if vxse.Head.InfoKind != "緊急地震速報" {
+		return nil, &NotSupportedError{Key: "vxse.Head.InfoKind", Value: vxse.Head.InfoKind}
+	}
+
 	return &epsp.JMAEEW{
 		Earthquake: &epsp.EEWEarthquake{
 			OriginTime:  EPSPTime(vxse.Body.Earthquake[0].OriginTime),
@@ -114,6 +122,11 @@ func Vxse2EpspQuake(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
 	// "取消" は未対応
 	if vxse.Head.InfoType == "取消" {
 		return nil, &NotSupportedError{Key: "vxse.Head.InfoType", Value: vxse.Head.InfoType}
+	}
+
+	// "緊急地震速報" は別オプション
+	if vxse.Head.InfoKind == "緊急地震速報" {
+		return nil, &NotSupportedError{Key: "vxse.Head.InfoKind", Value: vxse.Head.InfoKind}
 	}
 
 	jmaQuake := epsp.JMAQuake{
