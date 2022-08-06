@@ -45,7 +45,7 @@ func TestCompareToHTMLAnalyzer(t *testing.T) {
 			continue
 		}
 
-		actual, err := Vxse2Epsp(*v)
+		actual, err := Vxse2EpspQuake(*v)
 		if err != nil {
 			_, ok := err.(*NotSupportedError)
 			if ok {
@@ -116,7 +116,7 @@ func testVXSEDirectorySmoke(t *testing.T, dir string) {
 
 		var e *epsp.JMAQuake
 		t.Run("Convertable", func(t *testing.T) {
-			e, err = Vxse2Epsp(*v)
+			e, err = Vxse2EpspQuake(*v)
 			if err != nil {
 				_, ok := err.(*NotSupportedError)
 				if ok {

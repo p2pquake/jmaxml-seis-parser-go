@@ -10,7 +10,7 @@ import (
 	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
-func Vxse2Epsp(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
+func Vxse2EpspQuake(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
 	// "取消" は未対応
 	if vxse.Head.InfoType == "取消" {
 		return nil, &NotSupportedError{Key: "vxse.Head.InfoType", Value: vxse.Head.InfoType}

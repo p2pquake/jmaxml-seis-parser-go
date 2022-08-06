@@ -93,7 +93,7 @@ func convert(cmd *cobra.Command, args []string) {
 		fmt.Println(string(data))
 	} else {
 		// 変換
-		jmaQuake, err := converter.Vxse2Epsp(*report)
+		jmaQuake, err := converter.Vxse2EpspQuake(*report)
 		if err != nil {
 			log.Fatalf("%s convert error: %#v", filename, err)
 		}
