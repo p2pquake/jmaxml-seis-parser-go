@@ -25,12 +25,14 @@ var pretty bool
 var force bool
 var ignoreWarning bool
 var tsunami bool
+var eew bool
 
 func init() {
 	convertCmd.Flags().BoolVarP(&pretty, "pretty", "p", false, "Pretty print")
 	convertCmd.Flags().BoolVarP(&force, "force", "f", false, "Ignore validation error")
 	convertCmd.Flags().BoolVarP(&ignoreWarning, "ignore-warning", "w", false, "Ignore validation warning")
 	convertCmd.Flags().BoolVarP(&tsunami, "tsunami", "t", false, "Parse tsunami forecasts")
+	convertCmd.Flags().BoolVarP(&eew, "eew", "e", false, "Parse EEW (Earthquake Early Warning)")
 
 	rootCmd.AddCommand(convertCmd)
 }
@@ -84,6 +86,28 @@ func convert(cmd *cobra.Command, args []string) {
 			data, err = json.MarshalIndent(jmaTsunami, "", "  ")
 		} else {
 			data, err = json.Marshal(jmaTsunami)
+		}
+
+		if err != nil {
+			log.Fatalf("%s JSON conversion error: %#v", filename, err)
+		}
+
+		fmt.Println(string(data))
+	} else if eew {
+		// 変換
+		jmaEEW, err := converter.Vxse2EpspEEW(*report)
+		if err != nil {
+			log.Fatalf("%s convert error: %#v", filename, err)
+		}
+
+		// 検証
+		// FIXME: 未実装
+
+		// 出力
+		if pretty {
+			data, err = json.MarshalIndent(jmaEEW, "", "  ")
+		} else {
+			data, err = json.Marshal(jmaEEW)
 		}
 
 		if err != nil {

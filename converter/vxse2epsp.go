@@ -10,6 +10,102 @@ import (
 	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
 )
 
+func Vxse2EpspEEW(vxse jmaseis.Report) (*epsp.JMAEEW, error) {
+	if vxse.Head.InfoType == "取消" {
+		return &epsp.JMAEEW{
+			Earthquake: nil,
+			Issue:      nil,
+			Cancelled:  true,
+			Areas:      nil,
+		}, nil
+	}
+
+	return &epsp.JMAEEW{
+		Earthquake: &epsp.EEWEarthquake{
+			OriginTime:  EPSPTime(vxse.Body.Earthquake[0].OriginTime),
+			ArrivalTime: EPSPTime(vxse.Body.Earthquake[0].ArrivalTime),
+			Condition:   vxse.Body.Earthquake[0].Condition,
+			Hypocenter:  eewHypocenter(vxse),
+		},
+		Issue: &epsp.EEWIssue{
+			Time:    EPSPTime(vxse.Control.DateTime),
+			EventID: vxse.Head.EventID,
+			Serial:  vxse.Head.Serial,
+		},
+		Cancelled: false,
+		Areas:     eewAreas(vxse),
+	}, nil
+}
+
+func eewHypocenter(vxse jmaseis.Report) epsp.EEWHypocenter {
+	hypocenter := hypocenter(vxse)
+	return epsp.EEWHypocenter{
+		Name:       hypocenter.Name,
+		ReduceName: vxse.Body.Earthquake[0].Hypocenter.Area.ReduceName,
+		Latitude:   hypocenter.Latitude,
+		Longitude:  hypocenter.Longitude,
+		Depth:      hypocenter.Depth,
+		Magnitude:  hypocenter.Magnitude,
+	}
+}
+
+func eewAreas(vxse jmaseis.Report) []epsp.EEWArea {
+	areas := []epsp.EEWArea{}
+
+	for _, pref := range vxse.Body.Intensity.Forecast.Pref {
+		for _, area := range pref.Area {
+			areas = append(areas, epsp.EEWArea{
+				Pref:        pref.Name,
+				Name:        area.Name,
+				ScaleFrom:   eewScale(area.ForecastInt.From),
+				ScaleTo:     eewScale(area.ForecastInt.To),
+				ArrivalTime: eewArrivalTime(area.ArrivalTime, area.Condition),
+			})
+		}
+	}
+
+	return areas
+}
+
+func eewArrivalTime(dateTime jmaseis.DateTime, condition string) *string {
+	if condition == "既に主要動到達と推測" {
+		return nil
+	}
+
+	epspTime := EPSPTime(dateTime)
+	return &epspTime
+}
+
+func eewScale(s string) int {
+	switch s {
+	case "0":
+		return 0
+	case "1":
+		return 10
+	case "2":
+		return 20
+	case "3":
+		return 30
+	case "4":
+		return 40
+	case "5-":
+		return 45
+	case "5+":
+		return 50
+	case "6-":
+		return 55
+	case "6+":
+		return 60
+	case "7":
+		return 70
+	case "over":
+		return 99
+	case "不明":
+		return -1
+	}
+	return -1
+}
+
 func Vxse2EpspQuake(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
 	// "取消" は未対応
 	if vxse.Head.InfoType == "取消" {
@@ -80,6 +176,18 @@ func hasEarthquake(vxse jmaseis.Report) bool {
 	return false
 }
 
+func hasEEWEarthquake(vxse jmaseis.Report) bool {
+	if vxse.Head.InfoType == "取消" {
+		return false
+	}
+
+	if vxse.Head.InfoKind == "緊急地震速報" {
+		return true
+	}
+
+	return false
+}
+
 func earthquakeTime(vxse jmaseis.Report) jmaseis.DateTime {
 	if hasEarthquake(vxse) {
 		return vxse.Body.Earthquake[0].ArrivalTime
@@ -89,7 +197,7 @@ func earthquakeTime(vxse jmaseis.Report) jmaseis.DateTime {
 }
 
 func hypocenter(vxse jmaseis.Report) epsp.Hypocenter {
-	if !hasEarthquake(vxse) {
+	if !hasEarthquake(vxse) && !hasEEWEarthquake(vxse) {
 		return epsp.Hypocenter{
 			Name:      "",
 			Latitude:  -200,
