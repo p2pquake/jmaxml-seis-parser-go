@@ -71,6 +71,7 @@ func eewAreas(vxse jmaseis.Report) []epsp.EEWArea {
 				Name:        area.Name,
 				ScaleFrom:   eewScale(area.ForecastInt.From),
 				ScaleTo:     eewScale(area.ForecastInt.To),
+				KindCode:    area.Category.Kind.Code,
 				ArrivalTime: eewArrivalTime(area.ArrivalTime, area.Condition),
 			})
 		}
