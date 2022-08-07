@@ -35,5 +35,6 @@ type EEWArea struct {
 	Name        string  `json:"name"`
 	ScaleFrom   int     `json:"scaleFrom"`
 	ScaleTo     int     `json:"scaleTo"`
+	KindCode    string  `json:"kindCode"`
 	ArrivalTime *string `json:"arrivalTime"`
 }
