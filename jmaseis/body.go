@@ -273,25 +273,21 @@ type Kind struct {
 
 // 津波の到達予想時刻
 type FirstHeight struct {
-	ArrivalTimeFrom DateTime      // (任意項目)
-	ArrivalTimeTo   DateTime      // (任意項目)
-	ArrivalTime     DateTime      // 第 1 波の到達予想時刻 (任意項目。第 1 波が到達または到達と推測される場合は出現しない)
-	Condition       string        // NULL / "ただちに津波来襲と予測" / "津波到達中と推測" / "第１波の到達を確認" (任意項目)
-	Initial         string        // (任意項目)
-	TsunamiHeight   TsunamiHeight // (任意項目)
-	Revise          string        // NULL / "追加"/ "更新" (任意項目)
-	Period          float64       // (任意項目)
+	ArrivalTime   DateTime      // 第 1 波の到達予想時刻 (任意項目。第 1 波が到達または到達と推測される場合は出現しない)
+	Condition     string        // NULL / "ただちに津波来襲と予測" / "津波到達中と推測" / "第１波の到達を確認" (任意項目)
+	Initial       string        // (任意項目)
+	TsunamiHeight TsunamiHeight // (任意項目)
+	Revise        string        // NULL / "追加"/ "更新" (任意項目)
+	Period        float64       // (任意項目)
 }
 
 // 予想される津波の高さ
 type MaxHeight struct {
-	DateTime          DateTime      // (任意項目)
-	Condition         string        // 大津波警報の予想高さが最初に発表された場合や上方修正された場合 "重要" (任意項目)
-	TsunamiHeightFrom TsunamiHeight // (任意項目)
-	TsunamiHeightTo   TsunamiHeight // (任意項目)
-	TsunamiHeight     TsunamiHeight // 予想される津波の高さ(メートル単位) (任意項目)
-	Revise            string        // NULL / "追加" / "更新" (任意項目)
-	Period            float64       // (任意項目)
+	DateTime      DateTime      // (任意項目)
+	Condition     string        // 大津波警報の予想高さが最初に発表された場合や上方修正された場合 "重要" (任意項目)
+	TsunamiHeight TsunamiHeight // 予想される津波の高さ(メートル単位) (任意項目)
+	Revise        string        // NULL / "追加" / "更新" (任意項目)
+	Period        float64       // (任意項目)
 }
 
 type CurrentHeight struct {
@@ -312,9 +308,9 @@ type TsunamiStation struct {
 }
 
 type TsunamiHeight struct {
-	Type        string `xml:"type,attr"`        // "津波の高さ"
-	Unit        string `xml:"unit,attr"`        // "m"
-	Condition   string `xml:"condition,attr"`   // 定性的表現 "巨大" / "高い" / NULL (任意項目)
-	Description string `xml:"description,attr"` // "１０ｍ超" / "１０ｍ" / "５ｍ" / "３ｍ" / "１ｍ" / "０．２ｍ未満" / 高さ (任意項目)
-	Value       string `xml:",chardata"`        // 定性的表現の場合 "NaN"
+	Type        string  `xml:"type,attr"`        // "津波の高さ"
+	Unit        string  `xml:"unit,attr"`        // "m"
+	Condition   string  `xml:"condition,attr"`   // 地震規模推定の不確実性が大きい場合 "不明" (任意項目)
+	Description string  `xml:"description,attr"` // 文字列表現 "巨大" / "高い" / "１０ｍ超" / "１０ｍ" / "５ｍ" / "３ｍ" / "１ｍ" / "０．２ｍ未満" (任意項目)
+	Value       float64 `xml:",chardata"`        // メートル単位の値。定性的表現の場合 "NaN"
 }

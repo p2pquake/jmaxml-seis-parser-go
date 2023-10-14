@@ -24,3 +24,19 @@ func EPSPTime(dt jmaseis.DateTime) string {
 
 	return time.Time(dt).In(loc).Format("2006/01/02 15:04:05")
 }
+
+func EPSPTimeOrEmpty(dt jmaseis.DateTime) string {
+	utcLoc, err := time.LoadLocation("UTC")
+	if err != nil {
+		panic(err)
+	}
+	if time.Time(dt).In(utcLoc).IsZero() {
+		return ""
+	}
+
+	loc, err := time.LoadLocation("Asia/Tokyo")
+	if err != nil {
+		panic(err)
+	}
+	return time.Time(dt).In(loc).Format("2006/01/02 15:04:05")
+}
