@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+	<Title>津波警報・注意報・予報a</Title>
+	<DateTime>2022-09-18T08:15:02Z</DateTime>
+	<Status>通常</Status>
+	<EditorialOffice>大阪管区気象台</EditorialOffice>
+	<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+	<Title>津波予報</Title>
+	<ReportDateTime>2022-09-18T17:15:00+09:00</ReportDateTime>
+	<TargetDateTime>2022-09-18T17:15:00+09:00</TargetDateTime>
+	<EventID>20220918154449</EventID>
+	<InfoType>発表</InfoType>
+	<Serial></Serial>
+	<InfoKind>津波警報・注意報・予報</InfoKind>
+	<InfoKindVersion>1.0_1</InfoKindVersion>
+	<Headline>
+		<Text>津波注意報を解除しました。</Text>
+	</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+	<Tsunami>
+	<Forecast>
+		<CodeDefine>
+			<Type xpath="Item/Area/Code">津波予報区</Type>
+			<Type xpath="Item/Category/Kind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+			<Type xpath="Item/Category/LastKind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+		</CodeDefine>
+		<Item>
+			<Area><Name>宮古島・八重山地方</Name><Code>802</Code></Area>
+			<Category>
+				<Kind><Name>津波注意報解除</Name><Code>60</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+	</Forecast>
+	</Tsunami>
+	<Earthquake>
+		<OriginTime>2022-09-18T15:44:00+09:00</OriginTime>
+		<ArrivalTime>2022-09-18T15:44:00+09:00</ArrivalTime>
+		<Hypocenter>
+			<Area>
+				<Name>台湾付近</Name>
+				<Code type="震央地名">900</Code>
+				<jmx_eb:Coordinate description="北緯２３．０度　東経１２１．１度　ごく浅い" datum="日本測地系">+23.0+121.1+0/</jmx_eb:Coordinate>
+				<NameFromMark>石垣島の西南西３４０ｋｍ付近</NameFromMark>
+				<MarkCode type="震央補助">801</MarkCode>
+				<Direction>西南西</Direction>
+				<Distance unit="km">340</Distance>
+			</Area>
+		</Hypocenter>
+		<jmx_eb:Magnitude type="Mj" description="Ｍ７．２">7.2</jmx_eb:Magnitude>
+	</Earthquake>
+	<Comments>
+		<WarningComment codeType="固定付加文">
+			<Text>現在、大津波警報・津波警報・津波注意報を発表している沿岸はありません。</Text>
+			<Code>0107</Code>
+		</WarningComment>
+	</Comments>
+</Body>
+</Report>

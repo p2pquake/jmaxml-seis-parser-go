@@ -1,0 +1,23 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2022/09/18 15:49:07",
+    "type": "Focus"
+  },
+  "cancelled": false,
+  "areas": [
+    {
+      "name": "宮古島・八重山地方",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2022/09/18 16:00:00"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    }
+  ]
+}

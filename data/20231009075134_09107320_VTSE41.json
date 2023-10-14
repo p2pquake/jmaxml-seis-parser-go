@@ -1,0 +1,71 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2023/10/09 07:51:33",
+    "type": "Focus"
+  },
+  "cancelled": false,
+  "areas": [
+    {
+      "name": "千葉県九十九里・外房",
+      "grade": "Watch",
+      "immediate": true,
+      "firstHeight": {
+        "condition": "津波到達中と推測"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    },
+    {
+      "name": "千葉県内房",
+      "grade": "Watch",
+      "immediate": true,
+      "firstHeight": {
+        "condition": "津波到達中と推測"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    },
+    {
+      "name": "伊豆諸島",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "condition": "第１波の到達を確認"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    },
+    {
+      "name": "小笠原諸島",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "condition": "第１波の到達を確認"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    },
+    {
+      "name": "高知県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "condition": "第１波の到達を確認"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    }
+  ]
+}

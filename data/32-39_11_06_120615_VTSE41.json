@@ -1,0 +1,234 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2011/03/11 14:53:00",
+    "type": "Focus"
+  },
+  "cancelled": false,
+  "areas": [
+    {
+      "name": "青森県太平洋沿岸",
+      "grade": "MajorWarning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {
+        "description": "巨大"
+      }
+    },
+    {
+      "name": "岩手県",
+      "grade": "MajorWarning",
+      "immediate": false,
+      "firstHeight": {
+        "condition": "既に津波到達と推測"
+      },
+      "maxHeight": {
+        "description": "巨大"
+      }
+    },
+    {
+      "name": "宮城県",
+      "grade": "MajorWarning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:00:00"
+      },
+      "maxHeight": {
+        "description": "巨大"
+      }
+    },
+    {
+      "name": "福島県",
+      "grade": "MajorWarning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:10:00"
+      },
+      "maxHeight": {
+        "description": "巨大"
+      }
+    },
+    {
+      "name": "北海道太平洋沿岸中部",
+      "grade": "Warning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {
+        "description": "高い"
+      }
+    },
+    {
+      "name": "茨城県",
+      "grade": "Warning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {
+        "description": "高い"
+      }
+    },
+    {
+      "name": "千葉県九十九里・外房",
+      "grade": "Warning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:20:00"
+      },
+      "maxHeight": {
+        "description": "高い"
+      }
+    },
+    {
+      "name": "伊豆諸島",
+      "grade": "Warning",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:20:00"
+      },
+      "maxHeight": {
+        "description": "高い"
+      }
+    },
+    {
+      "name": "北海道太平洋沿岸東部",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "北海道太平洋沿岸西部",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:40:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "青森県日本海沿岸",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:10:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "千葉県内房",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:20:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "小笠原諸島",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:00:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "相模湾・三浦半島",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "静岡県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 15:30:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "愛知県外海",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:10:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "三重県南部",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:00:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "和歌山県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:10:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "徳島県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:40:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "高知県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 16:30:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "宮崎県",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 17:00:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "種子島・屋久島地方",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 17:10:00"
+      },
+      "maxHeight": {}
+    },
+    {
+      "name": "奄美諸島・トカラ列島",
+      "grade": "Watch",
+      "immediate": false,
+      "firstHeight": {
+        "arrivalTime": "2011/03/11 17:10:00"
+      },
+      "maxHeight": {}
+    }
+  ]
+}

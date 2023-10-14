@@ -1,0 +1,10 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2023/10/09 12:00:02",
+    "type": "Focus"
+  },
+  "cancelled": true,
+  "areas": []
+}

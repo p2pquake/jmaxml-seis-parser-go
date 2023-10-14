@@ -1,0 +1,10 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2022/09/18 17:15:02",
+    "type": "Focus"
+  },
+  "cancelled": true,
+  "areas": []
+}
