@@ -71,9 +71,11 @@ func generateAreas(vtse jmaseis.Report) []epsp.Area {
 	for _, item := range vtse.Body.Tsunami.Forecast.Item {
 		if grade(item.Category.Kind) != "" {
 			areas = append(areas, epsp.Area{
-				Name:      item.Area.Name,
-				Grade:     grade(item.Category.Kind),
-				Immediate: immediate(item.FirstHeight),
+				Name:        item.Area.Name,
+				Grade:       grade(item.Category.Kind),
+				Immediate:   immediate(item.FirstHeight),
+				FirstHeight: firstHeight(item.FirstHeight),
+				MaxHeight:   maxHeight(item.MaxHeight),
 			})
 		}
 	}
@@ -102,4 +104,25 @@ func immediate(f jmaseis.FirstHeight) bool {
 	}
 
 	return false
+}
+
+func firstHeight(f jmaseis.FirstHeight) epsp.FirstHeight {
+	return epsp.FirstHeight{
+		ArrivalTime: EPSPTimeOrEmpty(f.ArrivalTime),
+		Condition:   f.Condition,
+	}
+}
+
+func maxHeight(m jmaseis.MaxHeight) epsp.MaxHeight {
+	if m.TsunamiHeight.Condition == "不明" {
+		return epsp.MaxHeight{
+			Description: m.TsunamiHeight.Description,
+			Value:       0,
+		}
+	}
+
+	return epsp.MaxHeight{
+		Description: m.TsunamiHeight.Description,
+		Value:       m.TsunamiHeight.Value,
+	}
 }

@@ -1,13 +1,17 @@
 package converter
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 
 	"github.com/p2pquake/jmaxml-seis-parser-go/epsp"
 	"github.com/p2pquake/jmaxml-seis-parser-go/jmaseis"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestVTSESmoke(t *testing.T) {
@@ -74,5 +78,30 @@ func testVTSEDirectorySmoke(t *testing.T, dir string) {
 				}
 			}
 		})
+
+		jsonFilename := getFileNameWithoutExt(file.Name()) + ".json"
+		_, err = os.Stat(dir + "/" + jsonFilename)
+		if err != nil {
+			continue
+		}
+
+		t.Run("Compare", func(t *testing.T) {
+			data, err = ioutil.ReadFile(dir + "/" + jsonFilename)
+			if err != nil {
+				panic(err)
+			}
+
+			expected := epsp.JMATsunami{}
+			err = json.Unmarshal(data, &expected)
+			if err != nil {
+				panic(err)
+			}
+
+			assert.Equal(t, expected, *e, file.Name())
+		})
 	}
+}
+
+func getFileNameWithoutExt(path string) string {
+	return filepath.Base(path[:len(path)-len(filepath.Ext(path))])
 }

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+	<Title>津波警報・注意報・予報a</Title>
+	<DateTime>2023-10-09T03:00:02Z</DateTime>
+	<Status>通常</Status>
+	<EditorialOffice>気象庁本庁</EditorialOffice>
+	<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+	<Title>津波予報</Title>
+	<ReportDateTime>2023-10-09T12:00:00+09:00</ReportDateTime>
+	<TargetDateTime>2023-10-09T12:00:00+09:00</TargetDateTime>
+	<ValidDateTime>2023-10-09T18:00:00+09:00</ValidDateTime>
+	<EventID>20231009052500</EventID>
+	<InfoType>発表</InfoType>
+	<Serial></Serial>
+	<InfoKind>津波警報・注意報・予報</InfoKind>
+	<InfoKindVersion>1.0_1</InfoKindVersion>
+	<Headline>
+		<Text>津波注意報を解除しました。</Text>
+	</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+	<Tsunami>
+	<Forecast>
+		<CodeDefine>
+			<Type xpath="Item/Area/Code">津波予報区</Type>
+			<Type xpath="Item/Category/Kind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+			<Type xpath="Item/Category/LastKind/Code">警報等情報要素／津波警報・注意報・予報</Type>
+		</CodeDefine>
+		<Item>
+			<Area><Name>千葉県九十九里・外房</Name><Code>310</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>千葉県内房</Name><Code>311</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>伊豆諸島</Name><Code>320</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>小笠原諸島</Name><Code>321</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>相模湾・三浦半島</Name><Code>330</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>静岡県</Name><Code>380</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>愛知県外海</Name><Code>390</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>三重県南部</Name><Code>400</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>和歌山県</Name><Code>530</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>徳島県</Name><Code>580</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></Kind>
+				<LastKind><Name>津波予報（若干の海面変動）</Name><Code>71</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>高知県</Name><Code>610</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>宮崎県</Name><Code>760</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>鹿児島県東部</Name><Code>770</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>種子島・屋久島地方</Name><Code>771</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+		<Item>
+			<Area><Name>奄美群島・トカラ列島</Name><Code>772</Code></Area>
+			<Category>
+				<Kind><Name>津波予報（若干の海面変動）</Name><Code>72</Code></Kind>
+				<LastKind><Name>津波注意報</Name><Code>62</Code></LastKind>
+			</Category>
+		</Item>
+	</Forecast>
+	</Tsunami>
+	<Earthquake>
+		<OriginTime>2023-10-09T05:25:00+09:00</OriginTime>
+		<ArrivalTime>2023-10-09T05:25:00+09:00</ArrivalTime>
+		<Hypocenter>
+			<Area>
+				<Name>鳥島近海</Name>
+				<Code type="震央地名">903</Code>
+				<jmx_eb:Coordinate description="北緯２９．７度　東経１３９．９度　ごく浅い" datum="日本測地系">+29.7+139.9+0/</jmx_eb:Coordinate>
+				<NameFromMark>父島の北西３７０ｋｍ付近</NameFromMark>
+				<MarkCode type="震央補助">303</MarkCode>
+				<Direction>北西</Direction>
+				<Distance unit="km">370</Distance>
+			</Area>
+		</Hypocenter>
+		<jmx_eb:Magnitude type="Mj" condition="不明" description="Ｍ不明">NaN</jmx_eb:Magnitude>
+	</Earthquake>
+	<Text>［海面変動の見通し］
+　　９日０５時２５分に発生した鳥島近海を震源とする地震の津波注意報は、これ以上津波が大きくならないと判断し、１２時００分に全て解除しました。
+　これらの沿岸では津波に伴う海面変動が観測されておりますので、今後半日程度は継続する可能性が高いと考えられます。
+［留意事項］
+　津波注意報が発表されていたことや、津波が観測されていることについては、これまでの情報等により十分に認識されていると考えられます。
+また、これ以上津波が高くなる可能性は小さくなったと見られます。
+今後半日程度は海面変動が継続すると考えられますが、そのことを十分認識した上で行動頂ければ、津波による災害のおそれはないと見られることから津波注意報を解除しました。　海に入っての作業や釣り、海水浴などに際しては十分な留意が必要です。</Text>
+	<Comments>
+		<WarningComment codeType="固定付加文">
+			<Text>＜津波予報（若干の海面変動）＞
+若干の海面変動が予想されますが、被害の心配はありません。
+　
+今後もしばらく海面変動が続くと思われますので、海水浴や磯釣り等を行う際は注意してください。
+　
+現在、大津波警報・津波警報・津波注意報を発表している沿岸はありません。</Text>
+			<Code>0124 0104 0107</Code>
+		</WarningComment>
+	</Comments>
+</Body>
+</Report>

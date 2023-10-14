@@ -1,0 +1,35 @@
+{
+  "expire": null,
+  "issue": {
+    "source": "気象庁",
+    "time": "2023/10/09 06:40:17",
+    "type": "Focus"
+  },
+  "cancelled": false,
+  "areas": [
+    {
+      "name": "伊豆諸島",
+      "grade": "Watch",
+      "immediate": true,
+      "firstHeight": {
+        "condition": "津波到達中と推測"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    },
+    {
+      "name": "小笠原諸島",
+      "grade": "Watch",
+      "immediate": true,
+      "firstHeight": {
+        "condition": "津波到達中と推測"
+      },
+      "maxHeight": {
+        "description": "１ｍ",
+        "value": 1
+      }
+    }
+  ]
+}

@@ -15,7 +15,19 @@ type TsunamiIssue struct {
 }
 
 type Area struct {
-	Name      string `json:"name"`
-	Grade     string `json:"grade"`
-	Immediate bool   `json:"immediate"`
+	Name        string      `json:"name"`
+	Grade       string      `json:"grade"`
+	Immediate   bool        `json:"immediate"`
+	FirstHeight FirstHeight `json:"firstHeight"`
+	MaxHeight   MaxHeight   `json:"maxHeight"`
+}
+
+type FirstHeight struct {
+	ArrivalTime string `json:"arrivalTime,omitempty"`
+	Condition   string `json:"condition,omitempty"`
+}
+
+type MaxHeight struct {
+	Description string  `json:"description,omitempty"`
+	Value       float64 `json:"value,omitempty"`
 }
