@@ -1,0 +1,39 @@
+{
+  "earthquake": {
+    "originTime": "2024/01/16 18:42:12",
+    "arrivalTime": "2024/01/16 18:42:16",
+    "condition": "",
+    "hypocenter": {
+      "name": "能登半島沖",
+      "reduceName": "能登半島沖",
+      "latitude": 37.3,
+      "longitude": 136.6,
+      "depth": 10,
+      "magnitude": 5.7
+    }
+  },
+  "issue": {
+    "time": "2024/01/16 18:42:25",
+    "eventId": "20240116184216",
+    "serial": "1"
+  },
+  "cancelled": false,
+  "areas": [
+    {
+      "pref": "石川",
+      "name": "石川県能登",
+      "scaleFrom": 40,
+      "scaleTo": 45,
+      "kindCode": "11",
+      "arrivalTime": null
+    },
+    {
+      "pref": "石川",
+      "name": "石川県加賀",
+      "scaleFrom": 30,
+      "scaleTo": 40,
+      "kindCode": "10",
+      "arrivalTime": "2024/01/16 18:42:31"
+    }
+  ]
+}

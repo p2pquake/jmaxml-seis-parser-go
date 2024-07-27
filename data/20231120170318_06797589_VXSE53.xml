@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://xml.kishou.go.jp/jmaxml1/" xmlns:jmx="http://xml.kishou.go.jp/jmaxml1/">
+<Control>
+<Title>震源・震度に関する情報</Title>
+<DateTime>2023-11-20T08:03:18Z</DateTime>
+<Status>通常</Status>
+<EditorialOffice>気象庁本庁</EditorialOffice>
+<PublishingOffice>気象庁</PublishingOffice>
+</Control>
+<Head xmlns="http://xml.kishou.go.jp/jmaxml1/informationBasis1/">
+<Title>遠地地震に関する情報</Title>
+<ReportDateTime>2023-11-20T17:03:00+09:00</ReportDateTime>
+<TargetDateTime>2023-11-20T17:03:00+09:00</TargetDateTime>
+<EventID>20231120153000</EventID>
+<InfoType>発表</InfoType>
+<Serial>1</Serial>
+<InfoKind>地震情報</InfoKind>
+<InfoKindVersion>1.0_1</InfoKindVersion>
+<Headline>
+<Text>２０日１５時３０分ころ、海外で規模の大きな地震がありました。</Text>
+</Headline>
+</Head>
+<Body xmlns="http://xml.kishou.go.jp/jmaxml1/body/seismology1/" xmlns:jmx_eb="http://xml.kishou.go.jp/jmaxml1/elementBasis1/">
+<Earthquake>
+<OriginTime>2023-11-20T15:30:00+09:00</OriginTime>
+<ArrivalTime>2023-11-20T15:30:00+09:00</ArrivalTime>
+<Hypocenter>
+<Area>
+<Name>ニューギニア付近</Name>
+<Code type="震央地名">955</Code>
+<jmx_eb:Coordinate description="南緯　５．１度　東経１５１．３度　深さ不明" >-05.1+151.3/</jmx_eb:Coordinate>
+<DetailedName>パプアニューギニア、ニューブリテン</DetailedName>
+<DetailedCode type="詳細震央地名">1192</DetailedCode>
+</Area>
+</Hypocenter>
+<jmx_eb:Magnitude type="Mj" condition="不明" description="Ｍ不明">NaN</jmx_eb:Magnitude>
+</Earthquake>
+<Comments>
+<ForecastComment codeType="固定付加文">
+<Text>日本への津波の有無については現在調査中です。</Text>
+<Code>0229</Code>
+</ForecastComment>
+<FreeFormComment>令和５年１１月２０日１５時３０分頃（日本時間）にウラウン火山で大規模な噴火が発生しました（ダーウィン航空路火山灰情報センター（ＶＡＡＣ）による）。
+海外の検潮所での津波の観測状況については、随時お知らせします。
+この噴火に伴って津波が発生して日本へ到達する場合、到達予想時刻は早いところ（伊豆・小笠原諸島）で、２０日１８時３０分頃です。予想される津波の最大波の高さは不明です。
+今後の情報に注意してください。
+次の遠地地震に関する情報は、２０日１９時００分頃に発表の予定です。
+なお、新たな観測結果が入った場合には随時お知らせします。
+（注１）本情報の冒頭に「海外で規模の大きな地震がありました。」や「震源地」とありますが、これは「遠地地震に関する情報」を作成する際に自動的に付与される文言です。実際には、規模の大きな地震は発生していない点に留意してください。
+（注２）早い場合の日本への到達予想時刻は、火山の大規模噴火により発生した気圧波が３１０ｍ／ｓで伝播し津波が発生したと想定した時刻です。</FreeFormComment>
+</Comments>
+</Body>
+</Report>

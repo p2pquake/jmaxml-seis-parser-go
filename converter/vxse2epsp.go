@@ -145,7 +145,8 @@ func Vxse2EpspQuake(vxse jmaseis.Report) (*epsp.JMAQuake, error) {
 			DomesticTsunami: domesticTsunami(vxse),
 			ForeignTsunami:  foreignTsunami(vxse),
 		},
-		Points: generatePoints(vxse),
+		Points:   generatePoints(vxse),
+		Comments: generateComments(vxse),
 	}
 	return &jmaQuake, nil
 }
@@ -459,4 +460,15 @@ func generatePoints(vxse jmaseis.Report) []epsp.Point {
 	}
 
 	return points
+}
+
+func generateComments(vxse jmaseis.Report) epsp.Comments {
+	if len(vxse.Body.Comments) == 0 {
+		return epsp.Comments{
+			FreeFormComment: "",
+		}
+	}
+	return epsp.Comments{
+		FreeFormComment: vxse.Body.Comments[0].FreeFormComment,
+	}
 }
