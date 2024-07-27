@@ -7,6 +7,7 @@ type JMAQuake struct {
 	Issue      Issue      `json:"issue"`
 	Earthquake Earthquake `json:"earthquake"`
 	Points     []Point    `json:"points"`
+	Comments   Comments   `json:"comments"`
 }
 
 type Issue struct {
@@ -37,4 +38,8 @@ type Point struct {
 	Addr   string `json:"addr"`
 	Scale  int    `json:"scale"`
 	IsArea bool   `json:"isArea"`
+}
+
+type Comments struct {
+	FreeFormComment string `json:"freeFormComment"`
 }

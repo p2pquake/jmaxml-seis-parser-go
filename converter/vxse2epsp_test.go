@@ -207,6 +207,7 @@ func searchFile(dir string, filename string, e epsp.JMAQuake) (string, bool) {
 	}
 
 	pattern := regexp.MustCompile(filename[:13] + "[0-9]{2}" + issueType + "-\\d+.json")
+	jsonFilename := getFileNameWithoutExt(filename) + ".json"
 
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
@@ -215,6 +216,9 @@ func searchFile(dir string, filename string, e epsp.JMAQuake) (string, bool) {
 
 	for _, file := range files {
 		if pattern.MatchString(file.Name()) {
+			return file.Name(), true
+		}
+		if file.Name() == jsonFilename {
 			return file.Name(), true
 		}
 	}
