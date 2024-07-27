@@ -1,6 +1,6 @@
 module github.com/p2pquake/jmaxml-seis-parser-go
 
-go 1.19
+go 1.22
 
 require (
 	github.com/spf13/cobra v1.5.0
